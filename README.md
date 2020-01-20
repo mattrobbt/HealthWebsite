@@ -6,10 +6,10 @@ Group Members:
 
 - Charlie Hewitt (170015454)
 - Rauf Tarar Suultana (170012145)
-- Robb Matthew (Matriculation Number)
-- Verhelst Joris
-- Scheitler Daniel
-- Jiang Mengqi
+- Matthew Robb  (Matriculation Number)
+- Joris Verhelst
+- Daniel Scheitler 
+- Mengqi Jiang 
 
 
 

@@ -1,12 +1,17 @@
-# AgileDevelopment_templateCWRepo
+# Team16
 
-AC31007/AC51003 Agile Software Engineering - Group Number [x]
+AC31007/AC51003 Agile Software Engineering - Group Number 16
 
 Group Members:
 
-- Charlie Hewitt (170015454 Number)
-- Member 2 (Matriculation Number)
-- Member X (Matriculation Number)
+- Charlie Hewitt (170015454)
+- Rauf Tarar Suultana (170012145)
+- Robb Matthew (Matriculation Number)
+- Verhelst Joris
+- Scheitler Daniel
+- Jiang Mengqi
+
+
 
 ## Hints:
 

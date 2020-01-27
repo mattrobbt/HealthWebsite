@@ -5,9 +5,8 @@ AC31007/AC51003 Agile Software Engineering - Group Number 16
 Group Members:
 
 - Charlie Hewitt (170015454)
-- Rauf Tarar Suultana (170012145)
+- Rauf Tarar Sultana (170012145)
 - Matt Robb (170010004)
-- Verhelst Joris
 - Scheitler Daniel
 - Jiang Mengqi
 

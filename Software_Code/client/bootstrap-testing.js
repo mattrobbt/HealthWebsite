@@ -1,8 +1,8 @@
-const onClickShow = () => {
+const onClickShow = parentCard => {
   /**
    * TODO: hardcoded to card1 -> add as param...
    */
-  const parentCard = document.getElementById('card1');
+  //const parentCard = document.getElementById('card1');
 
   // get elements to show/hide
   const currentlyShowing = parentCard.querySelector('.showing-hidden');

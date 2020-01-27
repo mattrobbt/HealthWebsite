@@ -114,11 +114,18 @@
             </div>
           </div>
           <div class="card col-md-5" style="width: 34rem;">
-            <div class="card-body">
+            <div class="card-body" id="card2">
               <h5 class="card-title">Ninewells Hospital</h5>
               <h6 class="card-subtitle">Heart Surgery</h6>
               <p class="card-text">........2</p>
-              <button class="btn btn-primary btn-block">Show more</button>
+
+              <div class="showing-hidden">
+                <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card2'))">Show more</button>
+              </div>
+              <div class="hide">
+                Hellooo11
+                <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card2'))">Show less</button>
+              </div>
             </div>
           </div>
           <div class="card col-md-5" style="width: 34rem;">

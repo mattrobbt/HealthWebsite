@@ -26,6 +26,10 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="./bootstrap-testing.js">
+    </script>
+    
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-danger mb-3">
@@ -97,8 +101,9 @@
           <h5 class="card-title">Ninewells Hospital</h5>
               <h6 class="card-subtitle">Heart Surgery</h6>
               <p class="card-text">........1</p>
-              <button class="btn btn-primary btn-block">Show more</button>
-              <div class="collapse-show">
+              <button class="btn btn-primary btn-block collapse-show" onclick="onClickShow(this.parent)">Show more</button>
+              <div class="collapse">
+
                 Hellooo11
               </div>
             </div>

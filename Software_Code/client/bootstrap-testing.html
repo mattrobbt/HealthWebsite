@@ -54,12 +54,12 @@
           aria-haspopup="true"
           aria-expanded="false"
           >
-          Filters
+          Sort by
         </button>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Sort by Price</a>
-          <a class="dropdown-item" href="#">Sort by Distance</a>
-          <a class="dropdown-item" href="#">Sort by Location</a>
+          <a class="dropdown-item" href="#">Price</a>
+          <a class="dropdown-item" href="#">Distance</a>
+          <a class="dropdown-item" href="#">Location</a>
         </div>
       </div>
       <input
@@ -75,10 +75,18 @@
   <div
   class="row">
   <div class="container col-md-2">
-    Hellooooooo
-    <div class="card">
-      hi
-    </div>
+    <article class="card-group-item">
+      <header class="card-header">
+        <h6 class="title">Filters </h6>
+      </header>
+      <div class="filter-content">
+        <div class="card-body">
+        <div class="form-row">
+          <label for="customRange1">Maximum Price</label>
+          <input type="range" class="custom-range" id="customRange1">
+          <label for="customRange1">$1000</label> 
+        </div>
+        </div> <!-- card-body.// -->    </div>
   </div>
   <div class="container col-md-10">
 

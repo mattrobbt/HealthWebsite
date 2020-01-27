@@ -1,10 +1,18 @@
-const onClickShow = parentCard => {
-  const showDiv = parentCard.querySelector(".collapse.show");
-  showDiv.classList.remove(".collapse.show");
-  showDiv.classList.add(".collapse");
-  console.log("testing");
-  const collapseDiv = parentCard.querySelector(".collapse");
-  collapseDiv.classList.remove(".collapse");
-  collapseDiv.classList.add(".collapse.show");
-  console.log("testing2");
+const onClickShow = () => {
+  /**
+   * TODO: hardcoded to card1 -> add as param...
+   */
+  const parentCard = document.getElementById('card1');
+
+  // get elements to show/hide
+  const currentlyShowing = parentCard.querySelector('.showing-hidden');
+  const currentlyHiding = parentCard.querySelector('.hide');
+
+  // hiding currently showing
+  currentlyShowing.classList.remove('showing-hidden');
+  currentlyShowing.classList.add('hide');
+
+  // showing currently hidden
+  currentlyHiding.classList.remove('hide');
+  currentlyHiding.classList.add('showing-hidden');
 };

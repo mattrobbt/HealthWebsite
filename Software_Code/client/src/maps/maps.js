@@ -27,10 +27,18 @@ const addMarker = (map, position, content) => {
   });
 };
 
+/** todo: add address */
+const createMarkerContent = (hospital, procedure, price) => {
+  return `<div><h3>${hospital}</h3><h4>${procedure}</h4><p>${price}</p></div>`;
+};
 /** calling functions for testing */
 const map = createMap();
 
-const markerContent = `<div><h4>Testing</h4></div>`;
+const markerContent = createMarkerContent(
+  'Ninewells Hospital',
+  'Heart surgery',
+  '$564737'
+);
 
 addMarker(map, { lat: 40, lng: -80 }, markerContent);
 addMarker(map, { lat: 41, lng: -90 }, markerContent);

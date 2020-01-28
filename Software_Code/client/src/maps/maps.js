@@ -32,4 +32,6 @@ const map = createMap();
 
 const markerContent = `<div><h4>Testing</h4></div>`;
 
-addMarker(map, { lat: 40, lng: -85 }, markerContent);
+addMarker(map, { lat: 40, lng: -80 }, markerContent);
+addMarker(map, { lat: 41, lng: -90 }, markerContent);
+addMarker(map, { lat: 32, lng: -102 }, markerContent);

@@ -30,8 +30,23 @@
     <script
       src="../src/index.js">
     </script>
+    <script>
+      $( function() {
+        $( "#slider-range" ).slider({
+          range: true,
+          min: 0,
+          max: 500,
+          values: [ 75, 300 ],
+          slide: function( event, ui ) {
+            $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+          }
+        });
+        $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+          " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+      } );
+      </script>
     <link rel="stylesheet" href="./index.css">
-    <style> body { padding-top: 10%; padding-left: 2%; }</style>
+    <style> body { padding-top: 10%; padding-left: 2%;  } #map{padding: 2% 0% 0% 0%} .card-title {margin-top: -5%}</style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-danger mb-3 fixed-top">
@@ -55,6 +70,7 @@
 
     <div class="container-fluid">
       <div class="row">
+        
           <div class="col-3 px-1 position-fixed" id="sticky-sidebar">
 
             <!-- Side card used to take input of location-->
@@ -79,6 +95,7 @@
               <div class="card-body">
                 <div class="filter-content">
                 <h5 class="card-title">Filters</h5>
+
                 <div class="form-row">
                   <label for="customRange1">Maximum Price</label>
                   <input type="range" class="custom-range" id="ex6" type="text" data-slider-min="-5" data-slider-max="20" data-slider-step="1" data-slider-value="3">
@@ -95,8 +112,8 @@
             </div>
           </div>
           <div class="col offset-4" id="main">
-            <div class="container col-lg-8">
-              <div class="input-group mb-3 ">
+            <div class="container col-lg-10">
+              <div class="input-group mb-2 ">
                 <div class="input-group-prepend">
                   <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Sort by
@@ -117,10 +134,12 @@
 
             
           <!-- Procedure/hopsital information cards-->
-          <div class="container col-md-10">  
+          <div class="container-fluid offset-1">  
+            
           <!--Card 1-->
-          <div class="card col-lg-10 col offset-1"> 
-              <divstyle="width: 34rem;">
+          <div class="card col-lg-10 col"> 
+            <a class="col-lg-10 col offset-11"><img  id="map" src="images/map.png" style="max-width: 6%;" ></a>
+              
               <div class="card-body" id="card1">
               <h5 class="card-title">Ninewells Hospital</h5>
               <h6 class="card-subtitle">Heart Surgery</h6>
@@ -138,7 +157,8 @@
           </div>
           <!--Card1 END-->
 
-          <div class="card col-lg-10 col offset-1">
+          <div class="card col-lg-10 col">
+            <a class="col-lg-10 col offset-11"><img  id="map" src="images/map.png" style="max-width: 6%;" ></a>
             <div class="card-body" id="card2">
             <h5 class="card-title">Ninewells Hospital</h5>
             <h6 class="card-subtitle">Heart Surgery</h6>
@@ -154,7 +174,8 @@
             </div>
           </div>
 
-          <div class="card col-lg-10 col offset-1">
+          <div class="card col-lg-10 col">
+            <a class="col-lg-10 col offset-11"><img  id="map" src="images/map.png" style="max-width: 6%;" ></a>
             <div class="card-body" id="card2">
             <h5 class="card-title">Ninewells Hospital</h5>
             <h6 class="card-subtitle">Heart Surgery</h6>
@@ -170,7 +191,8 @@
             </div>
           </div>
 
-          <div class="card col-lg-10 col offset-1">
+          <div class="card col-lg-10 col">
+            <a class="col-lg-10 col offset-11"><img  id="map" src="images/map.png" style="max-width: 6%;" ></a>
             <div class="card-body" id="card2">
             <h5 class="card-title">Ninewells Hospital</h5>
             <h6 class="card-subtitle">Heart Surgery</h6>
@@ -186,7 +208,8 @@
             </div>
           </div>
 
-          <div class="card col-lg-10 col offset-1">
+          <div class="card col-lg-10 col ">
+            <a class="col-lg-10 col offset-11"><img  id="map" src="images/map.png" style="max-width: 6%;" ></a>
             <div class="card-body" id="card2">
             <h5 class="card-title">Ninewells Hospital</h5>
             <h6 class="card-subtitle">Heart Surgery</h6>
@@ -202,7 +225,8 @@
             </div>
           </div>
 
-          <div class="card col-lg-10 col offset-1">
+          <div class="card col-lg-10 col">
+            <a class="col-lg-10 col offset-11"><img  id="map" src="images/map.png" style="max-width: 6%;" ></a>
             <div class="card-body" id="card2">
             <h5 class="card-title">Ninewells Hospital</h5>
             <h6 class="card-subtitle">Heart Surgery</h6>

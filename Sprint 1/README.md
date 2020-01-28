@@ -4,19 +4,25 @@ All information about your first sprint should be put into this folder. Addition
 
 ---
 
-## Day [X] - Scrum Meeting summary
-The Scrum Master for this meeting was **Mike Crabb**
+## Monday 27/01/2020 - Scrum Meeting summary
+The Scrum Master for this meeting was **Rauf**
 
 ### Members Present:
-Mike, Rachel, information
+Charlie Hewitt 
+Rauf Tarar Sultana 
+Daniel Scheitler 
+Mengqi Jiang 
 
 ### Members Not Present:
-Naughty Student 1, Naughty Student 2
+Matt Robb
 
 ### Apologies:
-Ill Student 1.
+
 
 ### Summary of Conversation:
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Previously everyone has been working on planing and documentation. Today we will be working on finishing the acceptence test, User stories, design for the website. 
+Daniel & Matt will be working on wireframing
+Charlie & Rauf will be working on bootstrap and javascript
+Mengqi will be working on setting up the database.
 
----
+------------------------------------------------------------------------------------------------------------------------------------

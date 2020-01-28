@@ -27,11 +27,8 @@ const addMarker = (map, position, content) => {
   });
 };
 
-
 /** calling functions for testing */
 const map = createMap();
-
-map.
 
 const markerContent = `<div><h4>Testing</h4></div>`;
 

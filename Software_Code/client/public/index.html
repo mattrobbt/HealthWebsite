@@ -48,106 +48,156 @@
         </ul>
 
       </div>
+
     </nav>
-      <div class="container col-md-10 mt-4">
-      <div class="input-group mb-3 ">
-        <div class="input-group-prepend">
-          <button
-          class="btn btn-outline-secondary dropdown-toggle"
-          type="button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-          >
-          Sort by
-        </button>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Price</a>
-          <a class="dropdown-item" href="#">Distance</a>
-          <a class="dropdown-item" href="#">Location</a>
-        </div>
-      </div>
-      <input
-      type="text"
-      class="form-control"
-      aria-label="Text input with dropdown button"
-      />
-      <div class="input-group-append">
-        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
-      </div>
 
-    </div>
-  <div
-  class="row">
-  <div class="container col-md-2">
-    <article class="card-group-item">
-      <header class="card-header">
-        <h6 class="title">Filters </h6>
-      </header>
-      <div class="filter-content">
-        <div class="card-body">
-        <div class="form-row">
-          <label for="customRange1">Maximum Price</label>
-          <input type="range" class="custom-range" id="customRange1">
-          <label for="customRange1">$1000</label> 
-        </div>
-        </div> <!-- card-body.// -->    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+          <div class="col-3 px-1 position-fixed" id="sticky-sidebar">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <div class="filter-content">
+                <h5 class="card-title">Sort By</h5>
+                  <!-- Group of material radios - option 1 -->
+                  <div class="form-check">
+                  <input type="radio" class="form-check-input" id="materialGroupExample1" name="groupOfMaterialRadios">
+                  <label class="form-check-label" for="materialGroupExample1">Price (Low - High)</label>
+                  </div>
+        
+                  <!-- Group of material radios - option 2 -->
+                  <div class="form-check">
+                  <input type="radio" class="form-check-input" id="materialGroupExample2" name="groupOfMaterialRadios" checked>
+                  <label class="form-check-label" for="materialGroupExample2">Price (High - Low)</label>
+                  </div>
+        
+                  <!-- Group of material radios - option 3 -->
+                  <div class="form-check">
+                  <input type="radio" class="form-check-input" id="materialGroupExample3" name="groupOfMaterialRadios">
+                  <label class="form-check-label" for="materialGroupExample3"> Distance</label>
+                  </div> 
+
+                   <!-- Group of material radios - option 4 -->
+                   <div class="form-check">
+                    <input type="radio" class="form-check-input" id="materialGroupExample3" name="groupOfMaterialRadios">
+                    <label class="form-check-label" for="materialGroupExample3"> Ranking</label>
+                    </div> 
+                </div>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <div class="filter-content">
+                <h5 class="card-title">Sort By</h5>
+                <div class="form-row">
+                  <label for="customRange1">Maximum Price</label>
+                  <input type="range" class="custom-range" id="ex6" type="text" data-slider-min="-5" data-slider-max="20" data-slider-step="1" data-slider-value="3">
+                  <span id="ex6CurrentSliderValLabel">Current Slider Value: <span id="ex6SliderVal">3</span></span>
+                </div>
+                
+                <div class="form-row">
+                  <label for="customRange1">Maximum Distance</label>
+                  <input type="range" class="custom-range" id="customRange1">
+                  <label for="customRange1">$1000</label> 
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col offset-3" id="main">
+            <div class="container col-md-10 mt-4">
+              <div class="input-group mb-3 ">
+                <div class="input-group-prepend">
+                  <button
+                  class="btn btn-outline-secondary dropdown-toggle"
+                  type="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >
+                  Sort by
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Price</a>
+                  <a class="dropdown-item" href="#">Distance</a>
+                  <a class="dropdown-item" href="#">Location</a>
+                </div>
+              </div>
+              <input
+              type="text"
+              class="form-control"
+              aria-label="Text input with dropdown button"
+              />
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+              </div>
+        
+            </div>
+          
+          <div class="row"></div>
+            
+            </div>
+          
+          <div class="container col-md-10">
+        
+        
+            <div class="row">
+              <div class="card col-md-5" style="width: 34rem;">
+                <div class="card-body" id="card1">
+                  <h5 class="card-title">Ninewells Hospital</h5>
+                      <h6 class="card-subtitle">Heart Surgery</h6>
+                      <p class="card-text">........1</p>
+                      
+                      <div class="showing-hidden">
+                        <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card1'))">Show more</button>
+                      </div>
+                      <div class="hide">
+        
+                        Hellooo11
+                        <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card1'))">Show less</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card col-md-5" style="width: 34rem;">
+                    <div class="card-body" id="card2">
+                      <h5 class="card-title">Ninewells Hospital</h5>
+                      <h6 class="card-subtitle">Heart Surgery</h6>
+                      <p class="card-text">........2</p>
+        
+                      <div class="showing-hidden">
+                        <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card2'))">Show more</button>
+                      </div>
+                      <div class="hide">
+                        Hellooo11
+                        <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card2'))">Show less</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card col-md-5" style="width: 34rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Ninewells Hospital</h5>
+                      <h6 class="card-subtitle">Heart Surgery</h6>
+                      <p class="card-text">........3</p>
+                      <button class="btn btn-primary btn-block">Show more</button>
+                    </div>
+                  </div>
+                  <div class="card col-md-5" style="width: 34rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Ninewells Hospital</h5>
+                      <h6 class="card-subtitle">Heart Surgery</h6>
+                      <p class="card-text">........4</p>
+                      <button class="btn btn-primary btn-block">Show more</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            </div>
+    
+          </div>
+      </div>
   </div>
-  <div class="container col-md-10">
-
-
-    <div class="row">
-      <div class="card col-md-5" style="width: 34rem;">
-        <div class="card-body" id="card1">
-          <h5 class="card-title">Ninewells Hospital</h5>
-              <h6 class="card-subtitle">Heart Surgery</h6>
-              <p class="card-text">........1</p>
-              
-              <div class="showing-hidden">
-                <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card1'))">Show more</button>
-              </div>
-              <div class="hide">
-
-                Hellooo11
-                <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card1'))">Show less</button>
-              </div>
-            </div>
-          </div>
-          <div class="card col-md-5" style="width: 34rem;">
-            <div class="card-body" id="card2">
-              <h5 class="card-title">Ninewells Hospital</h5>
-              <h6 class="card-subtitle">Heart Surgery</h6>
-              <p class="card-text">........2</p>
-
-              <div class="showing-hidden">
-                <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card2'))">Show more</button>
-              </div>
-              <div class="hide">
-                Hellooo11
-                <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card2'))">Show less</button>
-              </div>
-            </div>
-          </div>
-          <div class="card col-md-5" style="width: 34rem;">
-            <div class="card-body">
-              <h5 class="card-title">Ninewells Hospital</h5>
-              <h6 class="card-subtitle">Heart Surgery</h6>
-              <p class="card-text">........3</p>
-              <button class="btn btn-primary btn-block">Show more</button>
-            </div>
-          </div>
-          <div class="card col-md-5" style="width: 34rem;">
-            <div class="card-body">
-              <h5 class="card-title">Ninewells Hospital</h5>
-              <h6 class="card-subtitle">Heart Surgery</h6>
-              <p class="card-text">........4</p>
-              <button class="btn btn-primary btn-block">Show more</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-    </div>
+      
   </body>
 </html>

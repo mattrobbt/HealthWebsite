@@ -1,1 +1,11 @@
-language: java
+matrix:
+  include:
+    - language: node_js
+    node_js:
+      - 10
+    before_install:
+    - cd Software_Code/client
+    install:
+      - npm install
+      script:
+      - npm test

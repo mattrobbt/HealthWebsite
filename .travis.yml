@@ -1,4 +1,4 @@
-matrix:
+jobs:
   include:
     - language: node_js
     node_js:
@@ -7,5 +7,5 @@ matrix:
     - cd Software_Code/client
     install:
       - npm install
-      script:
+    script:
       - npm test

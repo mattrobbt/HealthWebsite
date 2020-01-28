@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Healthcare thing</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="../src/index.js">
+    </script>
+    <link rel="stylesheet" href="./index.css">
+    <style> body { padding-top: 10%; padding-left: 2%; }</style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-danger mb-3 fixed-top">
+      <a class="navbar-brand" href="#" ><img src="images/hinder.png" style="max-width: 6%;"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <div class="navitem">
+            <a class="navbar-brand" href="#" >Login</a>
+            <a class="navbar-brand" href="#" >Register</a>
+          </div>
+
+        </ul>
+
+      </div>
+
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+          <div class="col-3 px-1 position-fixed" id="sticky-sidebar">
+
+            <!-- Side card used to take input of location-->
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <div class="filter-content">
+                <h5 class="card-title">Location</h5>
+                  <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder=" Zip Code" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Side card with range slider to filter maximum price/distance-->
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <div class="filter-content">
+                <h5 class="card-title">Filters</h5>
+                <div class="form-row">
+                  <label for="customRange1">Maximum Price</label>
+                  <input type="range" class="custom-range" id="ex6" type="text" data-slider-min="-5" data-slider-max="20" data-slider-step="1" data-slider-value="3">
+                  <span id="ex6CurrentSliderValLabel">Current Slider Value: <span id="ex6SliderVal">3</span></span>
+                </div>
+                
+                <div class="form-row">
+                  <label for="customRange1">Maximum Distance</label>
+                  <input type="range" class="custom-range" id="customRange1">
+                  <label for="customRange1">$1000</label> 
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col offset-4" id="main">
+            <div class="container col-lg-8">
+              <div class="input-group mb-3 ">
+                <div class="input-group-prepend">
+                  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Sort by
+                  </button>
+                  <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Price</a>
+                  <a class="dropdown-item" href="#">Distance</a>
+                  <a class="dropdown-item" href="#">Location</a>
+                  </div>
+                </div>
+                  <input type="text" class="form-control" aria-label="Text input with dropdown button"/>
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+                </div>
+              </div>
+            </div>
+
+
+            
+          <!-- Procedure/hopsital information cards-->
+          <div class="container col-md-10">  
+          <!--Card 1-->
+          <div class="card col-lg-10 col offset-1"> 
+              <divstyle="width: 34rem;">
+              <div class="card-body" id="card1">
+              <h5 class="card-title">Ninewells Hospital</h5>
+              <h6 class="card-subtitle">Heart Surgery</h6>
+              <p class="card-text">........1</p>
+
+              <div class="showing-hidden">
+                <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card1'))">Show more</button>
+              </div>
+              <div class="hide">
+
+                Hellooo11
+                <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card1'))">Show less</button>
+              </div>
+            </div>
+          </div>
+          <!--Card1 END-->
+
+          <div class="card col-lg-10 col offset-1">
+            <div class="card-body" id="card2">
+            <h5 class="card-title">Ninewells Hospital</h5>
+            <h6 class="card-subtitle">Heart Surgery</h6>
+            <p class="card-text">........2</p>
+
+              <div class="showing-hidden">
+                <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card2'))">Show more</button>
+              </div>
+              <div class="hide">
+                Hellooo11
+                <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card2'))">Show less</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card col-lg-10 col offset-1">
+            <div class="card-body" id="card2">
+            <h5 class="card-title">Ninewells Hospital</h5>
+            <h6 class="card-subtitle">Heart Surgery</h6>
+            <p class="card-text">........3</p>
+
+              <div class="showing-hidden">
+                <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card2'))">Show more</button>
+              </div>
+              <div class="hide">
+                Hellooo11
+                <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card2'))">Show less</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card col-lg-10 col offset-1">
+            <div class="card-body" id="card2">
+            <h5 class="card-title">Ninewells Hospital</h5>
+            <h6 class="card-subtitle">Heart Surgery</h6>
+            <p class="card-text">.......4</p>
+
+              <div class="showing-hidden">
+                <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card2'))">Show more</button>
+              </div>
+              <div class="hide">
+                Hellooo11
+                <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card2'))">Show less</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card col-lg-10 col offset-1">
+            <div class="card-body" id="card2">
+            <h5 class="card-title">Ninewells Hospital</h5>
+            <h6 class="card-subtitle">Heart Surgery</h6>
+            <p class="card-text">.......5</p>
+
+              <div class="showing-hidden">
+                <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card2'))">Show more</button>
+              </div>
+              <div class="hide">
+                Hellooo11
+                <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card2'))">Show less</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card col-lg-10 col offset-1">
+            <div class="card-body" id="card2">
+            <h5 class="card-title">Ninewells Hospital</h5>
+            <h6 class="card-subtitle">Heart Surgery</h6>
+            <p class="card-text">.......6</p>
+
+              <div class="showing-hidden">
+                <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card2'))">Show more</button>
+              </div>
+              <div class="hide">
+                Hellooo11
+                <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card2'))">Show less</button>
+              </div>
+            </div>
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+      
+  </body>
+</html>

@@ -38,24 +38,25 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-danger mb-3 fixed-top">
       <a class="navbar-brand" href="#" style="max-width: 20%;"><img src="images/hinder.png" style="max-width: 55%;"></a>
+      
 
-      <div class="input-group col-8">
-        <div class="input-group-prepend">
-        </div>
-          <input type="text" id="searchbox" class="form-control" placeholder="Search Procedures"/>
-          <div class="input-group-append">
-              <button class="btn btn-dark" type="button" id="button-addon2">Search</button>
-        </div>
-      </div>
+      <div class="input-group offset-0" style="max-width: 60%;">
+        <input class="form-control py-2 rounded-pill"  type="search" placeholder="search">
+        <span class="input-group-append">
+           
+            
+        </span>
+        
+    </div>
 
     
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <a class="navbar-brand btn-outline" href="#" >Login</a>
-            <a class="navbar-brand btn-outline" href="#" >Register</a>
+        <ul class="navbar-nav offset-10 fixed-top">
+          <a class="navbar-brand display-1 text-light" href="#" >Login </a>
+            <a class="navbar-brand display-1 text-light" href="#" >Register</a>
 
         </ul>
 
@@ -65,7 +66,7 @@
 
     <div class="container-fluid">
       <div class="row">
-          <div class="col-sm-offset-150 px-4 position-absolute" id="sticky-sidebar">
+          <div class="px-4 position-absolute" id="sticky-sidebar">
             <!-- Side card used to take input of location-->
             <div class="card" style="width: 18rem;">
               <div class="card-body">
@@ -88,9 +89,16 @@
                   <input type="radio" class="form-check-input" id="materialGroupExample3" name="groupOfMaterialRadios">
                   <label class="form-check-label" for="materialGroupExample3"> Distance</label>
                   </div>  
+
+                  <!-- Group of material radios - option 4 -->
+                  <div class="form-check">
+                    <input type="radio" class="form-check-input" id="materialGroupExample3" name="groupOfMaterialRadios">
+                    <label class="form-check-label" for="materialGroupExample3"> Ranking</label>
+                    </div>  
               </div>
             </div>
            </div>
+          </br> 
 
             <!-- Side card used to take input of location-->
             <div class="card" style="width: 18rem;">
@@ -107,6 +115,7 @@
               </div>
             </div>
            </div>
+          </br>
 
             <!-- Side card with range slider to filter maximum price/distance-->
             <div class="card" style="width: 18rem;">
@@ -285,16 +294,19 @@
 </div>
     
       <!-- The Modal -->
-<div class="modal" id="myModal">
-  <div class="modal-dialog modal-lg">
+<div class="modal modal-xl" id="myModal">
+  <div class="modal-dialog modal-xl">
     <div class="modal-content modal-lg">
       <!-- Modal body -->
-      <div class="modal-body modal-lg">
+      <div id="modal" class="modal-body">
+        
+        <iframe id="map" src="maps.html"><iframe>
       </div>
-        <iframe class="embed-responsive embed-responsive-1by1" src="maps.html"></iframe>
-      </div>
+      
     </div>
   </div>
+  </div>
+
   </body>
 
 

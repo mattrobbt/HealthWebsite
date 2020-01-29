@@ -8,7 +8,18 @@ html, body { padding-top: 7%; padding-left: 1%; max-width: 100%;
   overflow-x: hidden; }
 #map{padding: 3% 2% 0% 0%}
 .card-title {margin-top: -5%} 
-#searchbox{border:0px; } .navbar {
+#searchbox,#input-group {border:none; border-radius: 8px;
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0 8px 6px -6px #999;} 
+.navbar {
   -webkit-box-shadow: 0 8px 6px -6px #999;
   -moz-box-shadow: 0 8px 6px -6px #999;
   box-shadow: 0 8px 6px -6px #999;}
+#mymodal{
+  height:50%;
+}
+#map{
+  width: 50%;
+}
+

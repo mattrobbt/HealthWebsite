@@ -33,6 +33,7 @@ const createMarkerContent = (hospital, procedure, price) => {
 };
 /** calling functions for testing */
 const map = createMap();
+geoLocation(map);
 
 const markerContent = createMarkerContent(
   'Ninewells Hospital',

@@ -12,6 +12,7 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4CBJappqMXhSoYXh3RmXt0-oiJaCjuGg"></script>
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -38,7 +39,7 @@
   <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-danger mb-3 fixed-top">
-      <a class="navbar-brand" href="#" style="max-width: 20%;"><img src="images/hinder.png" style="max-width: 55%;"></a>
+      <a class="navbar-brand" href="#" style="max-width: 15%;"><img src="images/hinder.png" style="max-width: 70%;"></a>
       
 
       <div class="input-group offset-0" style="max-width: 60%;">
@@ -70,7 +71,7 @@
           <div class="px-4 position-absolute" id="sticky-sidebar">
             
           </br> 
-
+          <form>
             <!-- Side card used to take input of location-->
             <div class="card" style="width: 18rem;">
               <div class="card-body">
@@ -78,7 +79,7 @@
                 <h5 class="card-title">Location</h5>
                   <div class="input-group mb-3">
                   <input type="text" class="form-control" placeholder=" Zip Code" aria-label="Recipient's username" aria-describedby="button-addon2">
-                  <a class="col-5 offset-6 position-absolute " href="#" ><img src="images/currentlocation.png" style="max-width: 50%;"> </a>
+                  <a class="col-5 offset-6 position-absolute " href="#" ><img id="logo" src="images/currentlocation.png" style="max-width: 50%;"> </a>
                     <div class="input-group-append">
                     <button class="btn btn-outline-dark" type="button" id="button-addon2">Search</button>
                   </div>
@@ -138,8 +139,12 @@
                 </div>
                 </div>
               </div>
-            </div>
+            </div> 
+          </br>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
           </div>
+         
+        </form>
         
           <div class="col offset-4" id="main">
             
@@ -331,6 +336,11 @@
           <!-- Modal body -->
           <div class="modal-body">
             
+            <h4 class="display-5 position-absolute">
+              Font Size: 
+            </h4>
+            <a type="button" class="btn-outline-dark rounded-pill shadow-lg p-3 offset-7"data-dismiss="modal" data-target="#myModalpanel" >&plus;</a>
+            <a type="button" class="btn-outline-dark rounded-pill shadow-lg p-3 "data-dismiss="modal" data-target="#myModalpanel" >&minus;</a>
           </div>
           
        

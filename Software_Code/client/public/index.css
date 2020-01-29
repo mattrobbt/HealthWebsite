@@ -55,3 +55,7 @@ padding: 0 0 0 0%;
 #login_card{
   padding: 4% 6% 8% 5%;
   }
+
+  .checked {
+    color: orange;
+  }

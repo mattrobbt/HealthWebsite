@@ -4,3 +4,11 @@
 
 /* .showing-hidden {
 } */
+html, body { padding-top: 7%; padding-left: 1%; max-width: 100%; 
+  overflow-x: hidden; }
+#map{padding: 3% 2% 0% 0%}
+.card-title {margin-top: -5%} 
+#searchbox{border:0px; } .navbar {
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0 8px 6px -6px #999;}

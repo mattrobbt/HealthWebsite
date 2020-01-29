@@ -30,12 +30,21 @@ html, body { padding-top: 7%; padding-left: 1%; max-width: 100%;
   
 }
 
-.modal-content {
+#modalmap {
   height: 100%;
   width: 100%;
   min-height: 100%;
   border-radius: 10px;
   
+  margin-top:2%;
+  
+}
+#modalpanel {
+  height: 100%;
+  width: 50%;
+  min-height: 100%;
+  border-radius: 10px;
+  margin-left: 25%;
   margin-top:2%;
   
 }

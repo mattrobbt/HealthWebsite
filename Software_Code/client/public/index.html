@@ -298,7 +298,7 @@
   <!-- The Modal -->
   <div class="modal fade" id="myModal">
     <div class="modal-dialog-fluid ">
-      <div class="modal-content">
+      <div class="modal-content" id="modalmap">
       
         <!-- Modal Header -->
         <div class="modal-header">
@@ -316,6 +316,28 @@
       </div>
     </div>
   </div>
+
+    <!-- The accessibiltiy Modal panel -->
+    <div class="modal fade" id="mypanel">
+      <div class="modal-dialog-fluid ">
+        <div class="modal-content" id="modalpanel">
+        
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Accessibility</h4>
+            <button type="button" class="close" data-dismiss="modal" data-target="#myModalpanel" >&times;</button>
+          </div>
+          
+          <!-- Modal body -->
+          <div class="modal-body">
+            
+          </div>
+          
+       
+          
+        </div>
+      </div>
+    </div>
   
 </div>
   </body>
@@ -339,7 +361,7 @@
       <!-- Grid column -->
       <div class="col-md-2 mb-3">
         <h6 class="text-uppercase font-weight-bold">
-          <a href="#!">Help</a>
+          <a href="#!" data-toggle="modal" data-target="#mypanel">Accessibility</a>
         </h6>
       </div>
       <!-- Grid column -->

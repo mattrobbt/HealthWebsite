@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Item;
+package data;
 import java.io.*;
 import java.lang.*;
 /**
  *
  * @author mengqijiang
  */
-class Procedure {
+public class Procedure {
     public String ProceduresID = "";
     public String Description = "";
     
@@ -23,7 +23,7 @@ class Procedure {
     public String getDescription(){
         return Description;
     }
-    public String setDescription(String newDescription){
+    public void setDescription(String newDescription){
         this.Description=newDescription;
     }
 }

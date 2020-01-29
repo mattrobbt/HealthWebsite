@@ -20,7 +20,9 @@ const geoLocation = map => {
         infoWindow.setContent('Valid Location.');
         map.setCenter(position);
       },
-      console.log('error callback?'),
+      console.log(
+        'error callback?'
+      ) /** TODO: See if API-key setup resolves this being called on success */,
       options
     ); //handleError(map, infoWindow, map.getCenter()));
   } else {

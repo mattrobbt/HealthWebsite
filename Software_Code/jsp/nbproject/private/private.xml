@@ -2,6 +2,22 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/U:/Desktop/Team-16-agile/Software_Code/jsp/src/java/htmlgeneration/TreatmentCardGenerator.java</file>
+            <file>file:/U:/Desktop/Team-16-agile/Software_Code/jsp/src/java/data/FilterByPrice.java</file>
+            <file>file:/U:/Desktop/Team-16-agile/Software_Code/jsp/src/java/data/SearchProcedure.java</file>
+            <file>file:/U:/Desktop/Team-16-agile/Software_Code/jsp/web/RangeSlider.html</file>
+            <file>file:/U:/Desktop/Team-16-agile/Software_Code/jsp/web/filterbyprice.jsp</file>
+            <file>file:/U:/Desktop/Team-16-agile/Software_Code/jsp/web/index.jsp</file>
+            <file>file:/U:/Desktop/Team-16-agile/Software_Code/jsp/web/SearchSpecificTreatment.jsp</file>
+            <file>file:/U:/Desktop/Team-16-agile/Software_Code/jsp/src/java/htmlgeneration/CardGeneratorTest.java</file>
+            <file>file:/U:/Desktop/Team-16-agile/Software_Code/jsp/src/java/data/SearchSpecificTreatment.java</file>
+            <file>file:/U:/Desktop/Team-16-agile/Software_Code/jsp/src/java/htmlgeneration/Treatment.java</file>
+            <file>file:/U:/Desktop/Team-16-agile/Software_Code/jsp/web/indextest.jsp</file>
+            <file>file:/U:/Desktop/Team-16-agile/Software_Code/jsp/src/java/htmlgeneration/TreatmentFake.java</file>
+            <file>file:/U:/Desktop/Team-16-agile/Software_Code/jsp/src/java/data/Provider.java</file>
+            <file>file:/U:/Desktop/Team-16-agile/Software_Code/jsp/src/java/data/Procedure.java</file>
+            <file>file:/U:/Desktop/Team-16-agile/Software_Code/jsp/web/index.html</file>
+        </group>
     </open-files>
 </project-private>

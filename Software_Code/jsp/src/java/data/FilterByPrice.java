@@ -3,7 +3,7 @@ import data.Procedure;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import data.TreatmentinProvider;
+
 /**
  * Class to handle Database operations
  * @author Robert

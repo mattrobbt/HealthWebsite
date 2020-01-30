@@ -13,7 +13,7 @@ import htmlgeneration.TreatmentFake;
  * @author charleshewitt
  */
 public class CardGeneratorTest {
-    private TreatmentFake treatment = new TreatmentFake("Royal Alabama Hospital", "Heart Surgery", "$46524","1470 S Washington St </br> North Attleboro </br>AL </br>276023");
+//    private TreatmentFake treatment = new TreatmentFake("Royal Alabama Hospital", "Heart Surgery", "$46524","1470 S Washington St </br> North Attleboro </br>AL </br>276023");
     private TreatmentCardGenerator generator = new TreatmentCardGenerator(treatment);
     private String expectedResult = ""; // todo  
     

@@ -15,12 +15,7 @@ public class TreatmentFake implements Treatment {
     private String price;
     private String address;
     
-    public TreatmentFake(String provider, String procedure, String price, String address) {
-        this.providerName = provider;
-        this.procedureName = procedure;
-        this.price = price;
-        this.address = address;
-    }
+    
 
     /**
      * @return the providerName
@@ -28,14 +23,20 @@ public class TreatmentFake implements Treatment {
     public String getProviderName() {
         return providerName;
     }
-
+    
+    public void setProviderName(String newProviderName){
+        this.providerName=newProviderName;
+    }
     /**
      * @return the procedureName
      */
     public String getProcedureName() {
         return procedureName;
     }
-
+    
+    public void setProcedureName(String newprocedureName){
+        this.procedureName=newprocedureName;
+    }
     /**
      * @return the price
      */
@@ -43,12 +44,19 @@ public class TreatmentFake implements Treatment {
         return price;
     }
 
+    public void setPrice(String newPrice){
+        this.price=newPrice;
+    }
     /**
      * @return the address
      */
     public String getAddress() {
         return address;
     }
-
     
+    
+    public void setAddress(String newAddress){
+        this.address=newAddress;
+    }
+ 
 }

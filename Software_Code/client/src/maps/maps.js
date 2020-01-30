@@ -35,12 +35,28 @@ const createMarkerContent = (hospital, procedure, price) => {
 const map = createMap();
 geoLocation(map);
 
-const markerContent = createMarkerContent(
-  'Ninewells Hospital',
+const markerContent1 = createMarkerContent(
+  'University of Alabama Hospital',
   'Heart surgery',
-  '$564737'
+  '$273,737'
+);
+const markerContent2 = createMarkerContent(
+  'Mayo Clinic Hospital',
+  'Heart surgery',
+  '$226,998'
+);
+const markerContent3 = createMarkerContent(
+  'Baptist Health Medical Center Little Rock',
+  'Heart surgery',
+  '$162,530'
+);
+const markerContent4 = createMarkerContent(
+  'UC San Diego Health Hillcrest',
+  'Heart surgery',
+  '$319,044'
 );
 
-addMarker(map, { lat: 40, lng: -80 }, markerContent);
-addMarker(map, { lat: 41, lng: -90 }, markerContent);
-addMarker(map, { lat: 32, lng: -102 }, markerContent);
+addMarker(map, { lat: 33.5065, lng: -86.803 }, markerContent1);
+addMarker(map, { lat: 33.6591, lng: -111.9565 }, markerContent2);
+addMarker(map, { lat: 34.7443, lng: -92.3808 }, markerContent3);
+addMarker(map, { lat: 32.7551, lng: -117.1659 }, markerContent4);

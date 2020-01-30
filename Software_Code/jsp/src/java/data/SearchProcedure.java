@@ -49,7 +49,7 @@ public class SearchProcedure {
                 Procedure Procedure = new Procedure();
                 String ProceduresID = rs.getString("ProceduresID");
                 String Description = rs.getString("Description");
-                Procedure.setProcedureID(ProceduresID);
+                Procedure.setProceduresID(ProceduresID);
                 Procedure.setDescription(Description);
 
                 result.add(Procedure);

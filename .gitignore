@@ -3,3 +3,5 @@
 
 # node
 node_modules
+/Software_Code/jsp/dist/
+/Software_Code/client/nbproject/private/

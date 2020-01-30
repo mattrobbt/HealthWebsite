@@ -11,6 +11,7 @@ import data.Provider;
  * @author mengqijiang
  */
 public class TreatmentinProvider {
+    
     public String AveragePayments="";
     public String TotalDischarge="";
      public String getAveragePayments(){

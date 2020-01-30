@@ -65,7 +65,7 @@ public class FilterByPrice {
                 Procedure Procedure=new Procedure();
                 String newProcedureID=rs.getString("ProceduresID");   
                 String newDescription=rs.getString("Description");
-                Procedure.setProcedureID(newProcedureID);
+                Procedure.setProceduresID(newProcedureID);
                 Procedure.setDescription(newDescription);
                 result.add(Procedure);
                 
@@ -79,18 +79,7 @@ public class FilterByPrice {
         }
         
         return result;
-    }
-    public static void main(String args[]){
-        System.out.println("running");
-
-       
-        FilterByPrice item = new FilterByPrice();
-        List<Procedure> result=item.runDbQuery();
-        for(Procedure obj:result){
-            System.out.print(obj.getProceduresID());
-            System.out.println(obj.getDescription());
-        }
-    }
+    }  
 }   
 
 

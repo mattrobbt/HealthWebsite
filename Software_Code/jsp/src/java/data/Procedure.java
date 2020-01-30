@@ -17,7 +17,7 @@ public class Procedure {
     public String getProceduresID(){
         return ProceduresID;
     }
-    public void setProcedureID(String newProceduresID){
+    public void setProceduresID(String newProceduresID){
         this.ProceduresID=newProceduresID;
     }
     public String getDescription(){

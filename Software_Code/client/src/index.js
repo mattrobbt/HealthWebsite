@@ -13,6 +13,17 @@ const onClickShow = parentCard => {
   }
 };
 
+const hideModal = modelId => {
+  console.log('calling.hideModal');
+  const temp = document.getElementById(modelId);
+  if(temp){
+    temp.classList.add('hide');
+    //temp.classList.remove('fade');
+    temp.classList.remove('show');
+    
+  }
+}
+
 // test exports
 module.exports = onClickShow;
 

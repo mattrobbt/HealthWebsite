@@ -1,4 +1,3 @@
-
 // swaps .hide and .showing-hidden in children of parentCard
 const onClickShow = parentCard => {
   const currentlyShowing = parentCard.querySelector('.showing-hidden');
@@ -13,18 +12,16 @@ const onClickShow = parentCard => {
   }
 };
 
-const hideModal = modelId => {
+const hideModal = modal => {
   console.log('calling.hideModal');
-  const temp = document.getElementById(modelId);
-  if(temp){
-    temp.classList.add('hide');
-    //temp.classList.remove('fade');
-    temp.classList.remove('show');
-    
+  if (modal) {
+    modal.classList.add('hide');
+    modal.classList.remove('show');
   }
-}
+};
 
 // test exports
-module.exports = onClickShow;
-
-
+module.exports = {
+  onClickShow: onClickShow,
+  hideModal: hideModal
+};

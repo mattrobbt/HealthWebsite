@@ -1,6 +1,6 @@
 const { assert } = require('chai');
 const { JSDOM } = require('jsdom');
-const onClickShow = require('../src/index');
+const { onClickShow, hideModal } = require('../src/index');
 
 // importing jsdom to have access to dom elements for testing
 const { document } = new JSDOM(`...`).window;
@@ -50,6 +50,36 @@ describe('index.js', () => {
       element.innerHTML = '<div class="showing-hidden" id="1"></div>';
 
       onClickShow(element);
+    });
+  });
+
+  describe('hideModal()', () => {
+    it('correctly adds .hide', () => {
+      const element = document.createElement('div');
+      element.classList.add('modal', 'show');
+
+      hideModal(element);
+
+      const hideInClassList = element.classList.contains('hide');
+
+      assert.isTrue(hideInClassList);
+    });
+    it('correctly removes .show', () => {
+      const element = document.createElement('div');
+      element.classList.add('modal', 'show');
+
+      hideModal(element);
+
+      const showInClassList = element.classList.contains('show');
+
+      assert.isFalse(showInClassList);
+    });
+    it('doesnt crash when non-existing element is passed to it as a param', () => {
+      const element = document.createElement('div');
+
+      element.classList.add('modal', 'show');
+
+      hideModal(element);
     });
   });
 });

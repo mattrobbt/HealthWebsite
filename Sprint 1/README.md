@@ -65,8 +65,39 @@ Matt Robb
 
 ### Summary of Conversation:
 Matt: Yesterday worked on bootstrap frontend( implemented side filters container and pinned it to its location and other small bugs) and today he will be working on implementing close map button and other front end design. 
-Charlie: Yesterday researched and implemented maps and implemented pins of the location on the map also helped Matt with bootstrap. Today he will be researching and implementing geocoding 
+
+Charlie: Yesterday researched and implemented maps and implemented pins of the location on the map also helped Matt with bootstrap. Today he will be researching and implementing geocoding.
+
 Mengqi: Yesterday Worked on coonecting JSP to the database and today she will be working on same and once finished she will start on filtering data. 
+
 Daniel: Yesterday worked on documentation(Cleaned sprint and product backlog, moved to new template to displaye sprint burndown) and Today he will be updating the sprint backlog.
-Rauf: Yesterday worked on setting up the database (wrote SQL Script) and started importing the data and today I will finish importing data and then help Charlie with geocoding or JSP
+
+Rauf: Yesterday worked on setting up the database (wrote SQL Script) and started importing the data and today I will finish importing data and then help Charlie with geocoding or JSP.
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+## Thursday 30/01/2020 - Scrum Meeting summary
+The Scrum Master for this meeting was **Rauf**
+
+### Members Present:
+Charlie Hewitt 
+Rauf Tarar Sultana 
+Daniel Scheitler 
+Mengqi Jiang 
+Matt Robb
+
+### Members Not Present:
+Matt Robb
+### Apologies:
+
+### Summary of Conversation:
+
+Charlie: Yesterday worked on the geo location feature(using the brwosers geoservices it can detect users location) and wrote some java to generate and today he  No roadblocks just a small bug.
+
+Daniel: Yesterday worked on cookies and today he will be working on "sort by price" option. No roadblocks
+
+Mengqi: Yesterday finished coonecting JSP to the database and today she will be write queries in java to fetch data from database and finsih "sort by price" features.
+
+Rauf: Yesterday worked on papulating database, and reorgnaized the github and today will be working on preparing tomorrow's client meeting.
+
 

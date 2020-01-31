@@ -26,6 +26,8 @@ Pair Programming:
 - https://youtu.be/dj4PScdOfTU
 - https://youtu.be/TV9FnnfRJyI
 
+The product backlog will be uploaded on monday 
+
 
 ## Hints:
 

@@ -100,4 +100,30 @@ Mengqi: Yesterday finished coonecting JSP to the database and today she will be 
 
 Rauf: Yesterday worked on papulating database, and reorgnaized the github and today will be working on preparing tomorrow's client meeting.
 
+------------------------------------------------------------------------------------------------------------------------------------
+## Friday 31/01/2020 - Scrum Meeting summary
+The Scrum Master for this meeting was **Rauf**
+
+### Members Present:
+Charlie Hewitt 
+Rauf Tarar Sultana 
+Daniel Scheitler  
+Matt Robb
+
+### Members Not Present:
+Mengqi Jiang
+### Apologies:
+Mengqi Jiang
+### Summary of Conversation:
+
+Matt: Yesterday he redesigned the logo and branding of the website and accessibilty and fixed some small bugs on the website. Today he will be make some minor changes inspired by last night changes #42 and planing for the meeting and working on agile docs
+
+Daniel: Yesterday worked on sort by price queries on java and serch queries by code and name with Mengqi and today will be working on the retro perspective and other agile documents
+
+Charlie: Yesterday worked on the sprint backlog with Rauf and help troubleshoot some bugs in front end (video on pair programing 2) and wrote a document for google maps priceing. Today he will prapare documents for meeting with the client.
+
+Rauf: Yesterday worked agile documents, sprint backlog, and fixed a bug in the database and today will be working on preapring for the meeting with the client and other agile documents 
+
+
+
 

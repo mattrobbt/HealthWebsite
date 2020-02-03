@@ -7,8 +7,8 @@ Group Members:
 - Charlie Hewitt (170015454)
 - Rauf Tarar Sultana (170012145)
 - Matt Robb (170010004)
-- Scheitler Daniel
-- Jiang Mengqi(Karen)
+- Daniel Scheitler (170006835)
+- Mengqi Jiang (Karen , 2392491)
 
 # Information
 

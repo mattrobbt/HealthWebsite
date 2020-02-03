@@ -1,0 +1,10 @@
+SMAP
+indextest_jsp.java
+JSP
+*S JSP
+*F
++ 0 indextest.jsp
+client/public/indextest.jsp
+*L
+1,391:44
+*E

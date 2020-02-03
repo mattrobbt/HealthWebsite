@@ -9,8 +9,25 @@ Group Members:
 - Matt Robb (170010004)
 - Scheitler Daniel
 - Jiang Mengqi (2392491)
+- Jiang Mengqi(Karen , 2392491)
 
+# Information
 
+The website (with hardcoded data) is available at \\silva.computing.dundee.ac.uk/webapps/2019-agileteam16/public/index.html
+It should be accessed using Google Chrome as there are a few strange layout bugs in other browsers.
+I think Silva is only accessible from the computing network, the website currently takes a while (up to a few mins) to load. We will speak to Mahamadou about this at the start of Sprint 2.
+
+# Videos from Sprint 1
+
+Scrum meetings: 
+- https://youtu.be/0udVSU0X1jc
+- https://youtu.be/5dcea_6EG3Y
+
+Pair Programming:
+- https://youtu.be/dj4PScdOfTU
+- https://youtu.be/TV9FnnfRJyI
+
+The product backlog will be uploaded on monday 
 
 
 ## Hints:

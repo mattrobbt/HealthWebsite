@@ -53,24 +53,8 @@
     <nav class="navbar navbar-expand-lg navbar-light mb-3 fixed-top" style="background-color: #C91F37">
       <a class="navbar-brand" href="#" style="max-width: 10%;"><img src="images/hinder.png" style="max-width: 45%;"></a>
       <h3 class="display-6 text-light ">Healthify</h3>
-              <!-- Custom rounded search bars with input group -->
-              
-            
-          
-
-    
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav offset-10 fixed-top">
-          <a class="btn navbar-brand display-1 offset-2 text-light" href="login.html" >Login </a>
-            <a class="btn navbar-brand display-1 text-light" href="#" >Register</a>
-
-        </ul>
-
-      </div>
-      <form action="" class="col-12 col-lg-8">
+  
+      <form action="" class="col-12 col-lg-6 offset-lg-2">
         <div class="p-2 bg-light rounded rounded-pill shadow-lg">
           <div class="input-group">
             <input type="search" placeholder="Search" aria-describedby="button-addon1" class="form-control border-0 bg-light">
@@ -78,94 +62,109 @@
               <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
             </div>
           </div>
+          </div>
         </form>
+
+         <!-- <a class="btn navbar-brand display-1 offset-2 text-light" href="login.html" >Login </a>
+          <a class="btn navbar-brand display-1 text-light" href="#" >Register</a> -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul id="filters" class="navbar-nav fixed-top">
+          <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-5 col-md-5 col-lg-3 col-4 offset-sm-1 offset-lg-0 offset-md-3 " id="sticky-sidebar">
+                  
+                </br> 
+                <form>
+                  <!-- Side card used to take input of location-->
+                  <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <div class="filter-content">
+                      <h5 class="card-title">Location</h5>
+                        <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder=" Zip Code" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <a class="col-5 offset-6 position-absolute " href="#" ><img id="logo" src="images/currentlocation.png" style="max-width: 50%;"> </a>
+                          <div class="input-group-append">
+                          <button class="btn btn-outline-dark" type="submit" id="button-addon2">Search</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                 </div>
+                </br>
+                </form>
+                <form>
+                <!-- Side card used to take input of location-->
+                  <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <div class="filter-content">
+                      <h5 class="card-title">Sort By</h5>
+                       <!-- Group of material radios - option 1 -->
+                       <div class="form-check">
+                        <input type="radio" class="form-check-input" id="materialGroupExample1" name="groupOfMaterialRadios">
+                        <label class="form-check-label" for="materialGroupExample1">Price (Low - High)</label>
+                        </div>
+      
+                        <!-- Group of material radios - option 2 -->
+                        <div class="form-check">
+                        <input type="radio" class="form-check-input" id="materialGroupExample2" name="groupOfMaterialRadios" checked>
+                        <label class="form-check-label" for="materialGroupExample2">Price (High - Low)</label>
+                        </div>
+      
+                        <!-- Group of material radios - option 3 -->
+                        <div class="form-check">
+                        <input type="radio" class="form-check-input" id="materialGroupExample3" name="groupOfMaterialRadios">
+                        <label class="form-check-label" for="materialGroupExample3"> Distance</label>
+                        </div>  
+      
+                        <!-- Group of material radios - option 4 -->
+                        <div class="form-check">
+                          <input type="radio" class="form-check-input" id="materialGroupExample3" name="groupOfMaterialRadios">
+                          <label class="form-check-label" for="materialGroupExample3"> Ranking</label>
+                          </div>  
+                    </div>
+                  </div>
+                 </div>
+                </br>
+                  <!-- Side card with range slider to filter maximum price/distance-->
+                  <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <div class="filter-content">
+                      <h5 class="card-title">Filters</h5>
+      
+                      <div class="slidecontainer">
+                        <label>Maximum Price</label>
+                        <input type="range" class="custom-range" name="rangeInput" min="1" max="1000000" onchange="updateTextInput(this.value);">
+                        <label>$<input type="text" id="textInput" value="500000" style="border: none;"></label>
+                      </div>
+                   
+                    </br>
+                      <div class="slidecontainer2">
+                        <label></label>Distance</label>
+                        <input type="range" class="custom-range "name="rangeInput" min="0" max="2000" onchange="updateTextInput2(this.value);">
+                        <label><input type="text" id="textInput2" value="10" style="border: none;"> .mi</label>
+                      </div>
+      
+                      </div>
+                    </div>
+                  </div> 
+                </br>
+                  <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                </div>
+               
+              </form>
+
+        </ul>
+
+      </div>
+      
     </nav>
 
-    <div class="container-fluid">
-      <div class="row">
-          <div class="col-sm-5 col-md-5 col-lg-3 col-4 offset-sm-1 offset-lg-0 offset-md-3 " id="sticky-sidebar">
-            
-          </br> 
-          <form>
-            <!-- Side card used to take input of location-->
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <div class="filter-content">
-                <h5 class="card-title">Location</h5>
-                  <div class="input-group mb-3">
-                  <input type="text" class="form-control" placeholder=" Zip Code" aria-label="Recipient's username" aria-describedby="button-addon2">
-                  <a class="col-5 offset-6 position-absolute " href="#" ><img id="logo" src="images/currentlocation.png" style="max-width: 50%;"> </a>
-                    <div class="input-group-append">
-                    <button class="btn btn-outline-dark" type="submit" id="button-addon2">Search</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-           </div>
-          </br>
-          </form>
-          <form>
-          <!-- Side card used to take input of location-->
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <div class="filter-content">
-                <h5 class="card-title">Sort By</h5>
-                 <!-- Group of material radios - option 1 -->
-                 <div class="form-check">
-                  <input type="radio" class="form-check-input" id="materialGroupExample1" name="groupOfMaterialRadios">
-                  <label class="form-check-label" for="materialGroupExample1">Price (Low - High)</label>
-                  </div>
-
-                  <!-- Group of material radios - option 2 -->
-                  <div class="form-check">
-                  <input type="radio" class="form-check-input" id="materialGroupExample2" name="groupOfMaterialRadios" checked>
-                  <label class="form-check-label" for="materialGroupExample2">Price (High - Low)</label>
-                  </div>
-
-                  <!-- Group of material radios - option 3 -->
-                  <div class="form-check">
-                  <input type="radio" class="form-check-input" id="materialGroupExample3" name="groupOfMaterialRadios">
-                  <label class="form-check-label" for="materialGroupExample3"> Distance</label>
-                  </div>  
-
-                  <!-- Group of material radios - option 4 -->
-                  <div class="form-check">
-                    <input type="radio" class="form-check-input" id="materialGroupExample3" name="groupOfMaterialRadios">
-                    <label class="form-check-label" for="materialGroupExample3"> Ranking</label>
-                    </div>  
-              </div>
-            </div>
-           </div>
-          </br>
-            <!-- Side card with range slider to filter maximum price/distance-->
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <div class="filter-content">
-                <h5 class="card-title">Filters</h5>
-
-                <div class="slidecontainer">
-                  <label>Maximum Price</label>
-                  <input type="range" class="custom-range" name="rangeInput" min="1" max="1000000" onchange="updateTextInput(this.value);">
-                  <label>$<input type="text" id="textInput" value="500000" style="border: none;"></label>
-                </div>
-             
-              </br>
-                <div class="slidecontainer2">
-                  <label></label>Distance</label>
-                  <input type="range" class="custom-range "name="rangeInput" min="0" max="2000" onchange="updateTextInput2(this.value);">
-                  <label><input type="text" id="textInput2" value="10" style="border: none;"> .mi</label>
-                </div>
-
-                </div>
-              </div>
-            </div> 
-          </br>
-            <button type="submit" class="btn btn-primary btn-block">Submit</button>
-          </div>
-         
-        </form>
+    
         
-          <div class="col-lg-8 col-sm-7 col-10 mx-auto" id="main">
+          <div class="col-lg-8 col-15 mx-auto" id="main">
             
           <!-- Procedure/hopsital information cards-->
           <div class="container-fluid">  

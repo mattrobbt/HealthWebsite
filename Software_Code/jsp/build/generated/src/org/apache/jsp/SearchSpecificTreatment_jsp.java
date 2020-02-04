@@ -69,8 +69,8 @@ public final class SearchSpecificTreatment_jsp extends org.apache.jasper.runtime
       out.write("    <body>\n");
       out.write("        <form action=\"SearchSpecificTreatment.jsp\" method=\"post\">\n");
       out.write("                Search:<br><input type=\"text\" name=\"Search\" value=\"\">\n");
-      out.write("                <input type=\"radio\" name=\"procedure\" value=\"id\" checked> Search By Procedure ID<br>\n");
-      out.write("                <input type=\"radio\" name=\"procedure\" value=\"name\"> Search By Procedure Name<br>\n");
+      out.write("                <input type=\"radio\" name=\"id\" value=\"id\" checked=\"checked\"> Search By Procedure ID<br>\n");
+      out.write("                <input type=\"radio\" name=\"name\" value=\"name\"> Search By Procedure Name<br>\n");
       out.write("                <input type=\"submit\" value=\"Submit\">\n");
       out.write("            </form> \n");
       out.write("        </form>\n");
@@ -79,14 +79,18 @@ public final class SearchSpecificTreatment_jsp extends org.apache.jasper.runtime
       out.write("        ");
 
             SearchSpecificTreatment item=new SearchSpecificTreatment();
-            String search=request.getParameter("Search");
-            out.print(search);
+            Cookie SearchResult = new Cookie("Search", request.getParameter("Search"));
+            SearchResult.setMaxAge(60*60*24);
+            response.addCookie(SearchResult);
+            out.print(request.getParameter("Search"));
             List<Treatment> result=new ArrayList<Treatment>();
-            if(request.getParameter("procedure")=="id"){
-                result=item.runDbQueryBySearchProcedureID(search);
+            if(request.getParameter("id")!=null){
+                
+                result=item.runDbQueryBySearchProcedureID(request.getParameter("Search"));
             }
             else{
-                result=item.runDbQueryBySearchProcedureName(search);
+                
+                result=item.runDbQueryBySearchProcedureName(request.getParameter("Search"));
             }
             int index=1;
             for(Treatment obj:result){

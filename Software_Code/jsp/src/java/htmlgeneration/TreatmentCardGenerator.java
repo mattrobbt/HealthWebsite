@@ -33,7 +33,7 @@ public class TreatmentCardGenerator {
         html += "     <h6 class=\"card-title offset-10\">6.0 mi</h6>\n";
         html += "    <h4 class=\"card-title\">" + providerName + "</h4>\n";
         html += "     <h6 class=\"card-subtitle\">" + procedureName + "</h6>\n";
-        html += "     <h6 class=\"\">" + price + "</h6>\n";  
+        html += "     <h6 class=\"\">$" + price + "</h6>\n";  
         html += "     <span class=\"fa fa-star checked\"></span>\n";
         html += "     <span class=\"fa fa-star checked\"></span>\n";
         html += "     <span class=\"fa fa-star checked\"></span>\n";

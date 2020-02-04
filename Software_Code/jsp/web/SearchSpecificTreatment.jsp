@@ -5,7 +5,7 @@
 <%@ page import="java.util.ArrayList"%>
 <%@ page import="java.lang.*"%>
 <%@ page import="data.SearchSpecificTreatment"%>
-<%@ page import="htmlgeneration.TreatmentFake"%>
+<%@ page import="htmlgeneration.Treatment"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,26 +13,35 @@
         <title>JSP Page</title>
     </head>
     <body>
- 
-      <table border = "1" width = "100%">
-         <tr>
-            <th>ProviderName</th>
-            <th>ProcedureDescription</th>
-            <th>Price</th>
-            <th>Address</th>
-         </tr>
-         
-         <%         
-            SearchSpecificTreatment item = new SearchSpecificTreatment(); 
-            List<TreatmentFake> result=item.runDbQueryBySearchProcedureID("375");
-            for(TreatmentFake obj:result){
-                out.print("<td>"+obj.getProviderName()+"</td>");
-                out.print("<td>"+obj.getProcedureName()+"</td>");
-                out.print("<td>"+obj.getPrice()+"</td>");
-                out.print("<td>"+obj.getAddress()+"</td><tr>");
+        <form action="SearchSpecificTreatment.jsp" method="post">
+                Search:<br><input type="text" name="Search" value="">
+                <input type="radio" name="procedure" value="id" checked> Search By Procedure ID<br>
+                <input type="radio" name="procedure" value="name"> Search By Procedure Name<br>
+                <input type="submit" value="Submit">
+            </form> 
+        </form>
+     <%@ page import="htmlgeneration.CardGeneratorTest"%>
+     <%@ page import="htmlgeneration.TreatmentCardGenerator"%>
+        <%
+            SearchSpecificTreatment item=new SearchSpecificTreatment();
+            String search=request.getParameter("Search");
+            out.print(search);
+            List<Treatment> result=new ArrayList<Treatment>();
+            if(request.getParameter("procedure")=="id"){
+                result=item.runDbQueryBySearchProcedureID(search);
+            }
+            else{
+                result=item.runDbQueryBySearchProcedureName(search);
+            }
+            int index=1;
+            for(Treatment obj:result){
+                TreatmentCardGenerator test=new TreatmentCardGenerator(obj);
+                String html=test.generateCard(index);
+                out.print(html);
+                index++;
+                if(index==5)break;
             }
             %>
-      </table>
  <%   
   
 String name=request.getParameter("uname");  

@@ -45,6 +45,14 @@
    $('#myModal').show();
    $('.modal-backdrop').show();
  }
+ function destroyModal_review(){
+    $('#review').hide();
+    $('.modal-backdrop').hide();
+  }
+  function showModal_review(){
+   $('#review').show();
+   $('.modal-backdrop').show();
+ }
   </script>
 
   </head>
@@ -168,26 +176,30 @@
           <!--Card 1-->
           <div class="card col-lg-10 col"> 
               <div class="card-body" id="card1">
-              <a class="col-lg-10 col offset-11" data-toggle="modal" data-target="#myModal" onl><img  id="map" src="images/map.png" style="max-width: 5%;" ></a>
-              <h6 class="card-title offset-10">6.0 mi</h6>
-              <h4 class="card-title">University of Alabama Hospital</h4>
-              <h6 class="card-subtitle">Heart Surgery</h6>
-              <h6 class="">$273,737</h6>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
-              <span class="fa fa-star"></span>
-              <a href="#">Reviews</a>
+                
+                <a class="col-lg-10 col offset-11" data-toggle="modal" data-target="#myModal" onl><img  id="map" src="images/map.png" style="max-width: 5%;" ></a>
+                <h6 class="card-title offset-10">6.0 mi</h6>
+                <h4 class="card-title">University of Alabama Hospital</h4>
+                <h6 class="card-subtitle">Heart Surgery</h6>
+                <h6 class="">$273,737</h6>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <a href="#" data-toggle="modal" data-target="#review">Reviews</a>
+              </br>
+                <button id="upvote" class="fa fa-thumbs-up"> </button>
+                <button id="downvote" class="fa fa-thumbs-down"></button>
+                <br>
+                <div class="showing-hidden">
+                  <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card1'))">Show more</button>
+                </div>
+                <div class="hide">
 
-              <div class="showing-hidden">
-                <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card1'))">Show more</button>
-              </div>
-              <div class="hide">
-
-                619 South 19th Street </br> Birmingham </br>AL </br>35233
-                <button class="btn btn-outline-primary btn-block" onclick="onClickShow(document.getElementById('card1'))">Show less</button>
-              </div>
+                  619 South 19th Street </br> Birmingham </br>AL </br>35233
+                  <button class="btn btn-outline-primary btn-block" onclick="onClickShow(document.getElementById('card1'))">Show less</button>
+                </div>
             </div>
           </div>
           <!--Card1 END-->
@@ -204,7 +216,9 @@
               <span class="fa fa-star checked"></span>
               <span class="fa fa-star checked"></span>
               <span class="fa fa-star"></span>
-            
+            </br>
+            <button id="upvote" class="fa fa-thumbs-up"> </button>
+            <button id="downvote" class="fa fa-thumbs-down"></button>
 
               <div class="showing-hidden">
                 <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card2'))">Show more</button>
@@ -229,7 +243,9 @@
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star"></span>
             <span class="fa fa-star"></span>
-            
+          </br>
+          <button id="upvote" class="fa fa-thumbs-up"> </button>
+          <button id="downvote" class="fa fa-thumbs-down"></button>
 
               <div class="showing-hidden">
                 <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card3'))">Show more</button>
@@ -254,7 +270,9 @@
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
-            
+          </br>
+          <button id="upvote" class="fa fa-thumbs-up"> </button>
+          <button id="downvote" class="fa fa-thumbs-down"></button>
 
               <div class="showing-hidden">
                 <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card4'))">Show more</button>
@@ -276,7 +294,7 @@
   </div>
 </div>
     
-  <!-- The Modal -->
+  <!-- The Map Modal -->
   <div class="modal" id="myModal">
     <div class="modal-dialog-fluid ">
       <div class="modal-content" id="modalmap">
@@ -297,6 +315,51 @@
       </div>
     </div>
   </div>
+    <!-- Map Modal End-->
+
+   <!-- The Review Modal panel -->
+   <div class="modal fade" id="review">
+    <div class="modal-dialog-fluid ">
+      <div class="modal-content" id="modalpanel">
+        <!-- Modal Header -->
+        <div class="modal-header">
+            <h4 class="modal-title">Reviews</h4>
+            <button type="button" class="close" onclick="destroyModal_review('myModal');">
+            <span aria-hidden="true">&times;</span>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <!--Review 1-->
+          <div class="card col-10"> 
+            <div class="card-body" id="card1">
+              <h5 class="card-title">Great Treatment</h5>
+              <h6 class="card-subtitle">Heart Surgery</h6>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+          </div>
+        </div>
+        <!--Review1 END-->
+        <!--Review 2-->
+        <div class="card col-lg-10 col"> 
+          <div class="card-body" id="card1">
+            <h5 class="card-title">Fast and Caring</h5>
+            <h6 class="card-subtitle">Heart Surgery</h6>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+        </div>
+      </div>
+      <!--Review2 END-->
+        </div>  
+      </div>
+    </div>
+  </div>
+    <!-- Review Modal End -->
 
     <!-- The accessibiltiy Modal panel -->
     <div class="modal fade" id="mypanel">
@@ -305,7 +368,8 @@
           <!-- Modal Header -->
           <div class="modal-header">
             <h4 class="modal-title">Accessibility</h4>
-            <button type="button" class="close" data-dismiss="modal" data-target="#myModalpanel" >&times;</button>
+            <button type="button" class="close" onclick="destroyModal('myModal');">
+              <span aria-hidden="true">&times;</span>
           </div>
           <!-- Modal body -->
           <div class="modal-body">
@@ -318,7 +382,8 @@
         </div>
       </div>
     </div>
-</div>
+<!-- Accessibiltiy Modal End -->
+
   </body>
 <!-- Footer -->
 <footer class="page-footer font-small indigo">

@@ -2,11 +2,11 @@
   "name": "agile-team16-client",
   "version": "1.0.0",
   "description": "",
-  "main": "bootstrap-testing.js",
+  "main": "index.js",
   "scripts": {
-    "test": "mocha --watch || true"
+    "test": "mocha --watch --recursive || true"
   },
-  "author": "",
+  "author": "charlie",
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.2.0",

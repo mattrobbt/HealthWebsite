@@ -1,5 +1,5 @@
-const degreesToRadians = () => {
-  return 123;
+const degreesToRadians = degrees => {
+  return degrees * (Math.PI / 180);
 };
 
 module.exports = degreesToRadians;

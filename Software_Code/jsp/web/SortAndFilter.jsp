@@ -5,7 +5,7 @@
 <%@ page import="data.FilterByPrice"%>
 <%@ page import="htmlgeneration.Treatment"%>
 <%@ page import="data.DbConTemplate"%>
-<%@ page import="data.SearchSpecificTreatment"%>
+<%@ page import="data.SortingByPrice"%>
 <html>
    <head>
       <title>SELECT Operation</title>
@@ -76,25 +76,29 @@
         </form>
        
        <%
+           
            Cookie cookie=null;
            Cookie[] cookies=null;
            cookies=request.getCookies();
            if(cookies!=null){
                out.print("Find Cookies");
-               for (int i = 0; i < cookies.length; i++) {
-               cookie = cookies[i];
+               cookie=cookies[1];
                out.print("Name : " + cookie.getName( ) + ",  ");
                out.print("Value: " + cookie.getValue( )+" <br/>");
-            }
            }else {
             out.println("<h2>No cookies founds</h2>");
-         }
-           
-          
-           String search=request.getParameter("search");
-           String maxprice=request.getParameter("pricerange");
-           out.print(search);
-           out.print(maxprice);
+            }
+           SortingByPrice item=new SortingByPrice();
+           List<Treatment> result=new ArrayList<Treatment>();
+           if(request.getParameter("price")=="pricelowtohigh"){
+               int maxprice=Integer.parseInt(request.getParameter("pricerange"));
+               result=item.sortingByPriceLowtoHigh(cookie.getValue(), maxprice);
+           }
+           else if(request.getParameter("price")=="pricehightolow"){
+               int maxprice=Integer.parseInt(request.getParameter("pricerange"));
+               result=item.sortingByPriceHightoLow(cookie.getValue(), maxprice);
+
+           }
            %>
  <%   
   

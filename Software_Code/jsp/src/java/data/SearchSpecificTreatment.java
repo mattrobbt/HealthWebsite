@@ -26,7 +26,7 @@ public class SearchSpecificTreatment {
                + "inner join 19agileteam16db.procedures as procedures on treatment.proceduresID=procedures.proceduresID "
                + "where procedures.proceduresID=\""+searchProcedure+"\" or procedures.description like '%"+searchProcedure+"%'";
 
-       
+
        
        List<Treatment> result = item.dbQuery(query);
        return result;

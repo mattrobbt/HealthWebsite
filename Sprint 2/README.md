@@ -25,3 +25,26 @@ Mengqi: On Friday she worked on the prepartion on client meeting and today will 
 Matt: On Friday he worked on some UI design changes and he will be updating the UI design as clients asked.
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+
+## Tuesday 04/02/2020 - Scrum Meeting summary
+The Scrum Master for this meeting was Rauf
+### Members Present:
+Charlie Hewitt, Rauf Tarar Sultana, Daniel Scheitler, Mengqi Jiang, Matt Robb
+
+### Members Not Present:
+
+### Apologies:
+
+### Summary of Conversation:
+Charlie: Yesterday he looked at the feedback and wrote a document on github flow and he will be working on distance logic.
+
+Rauf: Yesterday looked on the feedback from sprint 1 and  worked on the documentation to make it all upto date(Product backlog, sprint back log). Today I will be working on setting up travis for TDD.
+
+Daniel:Yesterday he worked on things mentioned on the feedback from Mike on sprint 1 and planed the sprint 2 and today he will be working on retrospective.
+
+Mengqi:Yesterday she worked on feedback and planed sprint 2 and today she will be working on connecting search bar and results cards to backend.
+
+Matt: Yesterday he worked on accessibility to get the website display properly on mobile and he will be working on implementing reviews functionality.
+
+---------------------------------------------------------------------------------------------------------------------------------

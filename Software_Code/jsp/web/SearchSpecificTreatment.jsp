@@ -15,8 +15,7 @@
     <body>
         <form action="SearchSpecificTreatment.jsp" method="post">
                 Search:<br><input type="text" name="Search" value="">
-                <input type="radio" name="procedure" value="id" checked> Search By Procedure ID<br>
-                <input type="radio" name="procedure" value="name"> Search By Procedure Name<br>
+                
                 <input type="submit" value="Submit">
             </form> 
         </form>
@@ -24,14 +23,18 @@
      <%@ page import="htmlgeneration.TreatmentCardGenerator"%>
         <%
             SearchSpecificTreatment item=new SearchSpecificTreatment();
-            String search=request.getParameter("Search");
-            out.print(search);
+            Cookie SearchResult = new Cookie("Search", request.getParameter("Search"));
+            SearchResult.setMaxAge(60*60*24);
+            response.addCookie(SearchResult);
+            out.print(request.getParameter("Search"));
             List<Treatment> result=new ArrayList<Treatment>();
-            if(request.getParameter("procedure")=="id"){
-                result=item.runDbQueryBySearchProcedureID(search);
+            if(request.getParameter("Search")!=null){
+               
+                result=item.runDbQueryBySearchProcedure(request.getParameter("Search"));out.print("enter");
             }
             else{
-                result=item.runDbQueryBySearchProcedureName(search);
+                
+                out.print("no search input");
             }
             int index=1;
             for(Treatment obj:result){

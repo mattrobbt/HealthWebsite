@@ -4,30 +4,28 @@
  * and open the template in the editor.
  */
 package htmlgeneration;
-
-import htmlgeneration.TreatmentCardGenerator;
-import htmlgeneration.TreatmentFake;
-
+import htmlgeneration.Treatment;
+import data.DbConTemplate;
+import data.SearchSpecificTreatment;
 /**
  *  Update to use JUnit!!!
  * @author charleshewitt
  */
 public class CardGeneratorTest {
-//    private TreatmentFake treatment = new TreatmentFake("Royal Alabama Hospital", "Heart Surgery", "$46524","1470 S Washington St </br> North Attleboro </br>AL </br>276023");
+    private Treatment treatment = new Treatment();
     private TreatmentCardGenerator generator = new TreatmentCardGenerator(treatment);
     private String expectedResult = ""; // todo  
     
     public void test() {
-        String result = "";
+        
         
         for (int i = 0; i < 5; i++) {
-           result += generator.generateCard(i);
+           generator.generateCard(i);
            
-           result += "\n\n\n";
 
         }
     
-        System.out.println(result);
+        
     }
 
     public static void main(String[] args) {

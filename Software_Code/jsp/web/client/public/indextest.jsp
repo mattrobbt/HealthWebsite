@@ -148,10 +148,10 @@
         
           <div class="col offset-4" id="main">
             
-          <!-- Procedure/hopsital information cards-->
+<!--           Procedure/hopsital information cards-->
           <div class="container-fluid offset-1">  
             
-          <!--Card 1-->
+          Card 1
           <div class="card col-lg-10 col"> 
               <div class="card-body" id="card1">
               <a class="col-lg-10 col offset-11" data-toggle="modal" data-target="#myModal"><img  id="map" src="images/map.png" style="max-width: 10%;" ></a>
@@ -171,109 +171,31 @@
               </div>
             </div>
           </div>
-          <!--Card1 END-->
-
-          <div class="card col-lg-10 col">
-            <div class="card-body" id="card2">
-            <a class="col-lg-10 col offset-11" data-toggle="modal" data-target="#myModal"><img  id="map" src="images/map.png" style="max-width: 10%;" ></a> 
-            <h6 class="card-title offset-10">6.0 mi</h6>           
-            <h4 class="card-title">Ninewells Hospital</h4>
-            <h6 class="card-subtitle">Heart Surgery</h6>
-            <h6 class="">$120,000</h6>
+          Card1 END
+        <%@page contentType="text/html" pageEncoding="UTF-8"%>
+        <%@ page import = "java.io.*,java.util.*,java.sql.*"%>
+        <%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
+        <%@ page import="java.util.ArrayList"%>
+        <%@ page import="java.lang.*"%>
+        <%@ page import="htmlgeneration.Treatment"%>
+        <%@ page import="data.DbConTemplate"%>
+        <%@ page import="data.SearchSpecificTreatment"%>
+        <%@ page import="htmlgeneration.CardGeneratorTest"%>
+        <%@ page import="htmlgeneration.TreatmentCardGenerator"%>
+        <%
+            SearchSpecificTreatment item=new SearchSpecificTreatment();
+            List<Treatment> result=item.
+            int index=1;
+            for(Treatment obj:result){
+                generateCard(obj,index);
+            }
+            %>
             
-            <p class="card-text">........2</p>
-
-              <div class="showing-hidden">
-                <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card2'))">Show more</button>
-              </div>
-              <div class="hide">
-                Hellooo11
-                <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card2'))">Show less</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="card col-lg-10 col">
-            <div class="card-body" id="card3">
-            <a class="col-lg-10 col offset-11" data-toggle="modal" data-target="#myModal"><img  id="map" src="images/map.png" style="max-width: 10%;" ></a>
-            <h6 class="card-title offset-10">6.0 mi</h6>
-            <h4 class="card-title">Ninewells Hospital</h4>
-            <h6 class="card-subtitle">Heart Surgery</h6>
-            <h6 class="">$120,000</h6>
-              
-            <p class="card-text">........3</p>
-
-              <div class="showing-hidden">
-                <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card3'))">Show more</button>
-              </div>
-              <div class="hide">
-                Hellooo11
-                <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card3'))">Show less</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="card col-lg-10 col">
-            <div class="card-body" id="card4">
-            <a class="col-lg-10 col offset-11" data-toggle="modal" data-target="#myModal"><img  id="map" src="images/map.png" style="max-width: 10%;" ></a>
-            <h6 class="card-title offset-10">6.0 mi</h6>
-            <h4 class="card-title">Ninewells Hospital</h4>
-            <h6 class="card-subtitle">Heart Surgery</h6>
-            <h6 class="">$120,000</h6>
-             
-            <p class="card-text">.......4</p>
-
-              <div class="showing-hidden">
-                <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card4'))">Show more</button>
-              </div>
-              <div class="hide">
-                Hellooo11
-                <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card4'))">Show less</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="card col-lg-10 col ">
-            <div class="card-body" id="card5">
-            <a class="col-lg-10 col offset-11" data-toggle="modal" data-target="#myModal"><img  id="map" src="images/map.png" style="max-width: 10%;" ></a>
-            <h6 class="card-title offset-10">6.0 mi</h6>
-            <h4 class="card-title">Ninewells Hospital</h4>
-            <h6 class="card-subtitle">Heart Surgery</h6>
-            <h6 class="">$120,000</h6>
-             
-            <p class="card-text">.......5</p>
-
-              <div class="showing-hidden">
-                <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card5'))">Show more</button>
-              </div>
-              <div class="hide">
-                Hellooo11
-                <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card5'))">Show less</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="card col-lg-10 col">
-            <div class="card-body" id="card6">
-            <a class="col-lg-10 col offset-11" data-toggle="modal" data-target="#myModal"><img  id="map" src="images/map.png" style="max-width: 10%;" ></a>
-            <h6 class="card-title offset-10">6.0 mi</h6>
-            <h4 class="card-title">Ninewells Hospital</h4>
-            <h6 class="card-subtitle">Heart Surgery</h6>
-            <h6 class="">$120,000</h6>
             
-            <p class="card-text">.......6</p>
-
-              <div class="showing-hidden">
-                <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card6'))">Show more</button>
-              </div>
-              <div class="hide">
-                Hellooo11
-                <button class="btn btn-primary btn-block" onclick="onClickShow(document.getElementById('card6'))">Show less</button>
-              </div>
           </div>
         </div>  
         
-          <!-- Page Navigation -->
+           Page Navigation 
       </br> 
       <nav aria-label="Page navigation example">
         <ul class="pagination">
@@ -378,7 +300,7 @@
   <!-- Footer Links -->
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+  <div class="footer-copyright text-center py-3">Â© 2020 Copyright:
     <a href="https://mdbootstrap.com/education/bootstrap/"> Hinder</a>
   </div>
   <!-- Copyright -->

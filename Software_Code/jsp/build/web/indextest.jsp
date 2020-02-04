@@ -44,11 +44,9 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-danger mb-3 fixed-top">
       <a class="navbar-brand" href="#" style="max-width: 20%;"><img src="images/hinder.png" style="max-width: 55%;"></a>
       
-    <!--searching -->
+
       <div class="input-group offset-0" style="max-width: 60%;">
-          <form action="indextest.jsp" method="GET">
-            <input class="form-control py-2 rounded-pill shadow-lg p-4 mb-2 bg-white rounded"  type="search" placeholder="Search" name="searchProcedure">
-          </form>
+        <input class="form-control py-2 rounded-pill shadow-lg p-4 mb-2 bg-white rounded"  type="search" placeholder="Search">
         <span class="input-group-append">
            
             
@@ -133,31 +131,15 @@
 
                 <div class="form-row">
                   <label for="customRange1">Maximum Price</label>
-                  <input type="range" class="custom-range" id="myPriceRange" type="text" min="0" max="100" data-slider-step="1" value="50" >
-                   <p>Current Slider Value:$ <span id="pricedemo"></span></p>
-                   <script>
-                        var priceslider = document.getElementById("myPriceRange");
-                        var priceoutput = document.getElementById("pricedemo");
-                        priceoutput.innerHTML = priceslider.value;
-                        priceslider.oninput = function() {
-                            priceoutput.innerHTML = this.value;
-                        }
-                    </script>
-                   
+                  <input type="range" class="custom-range" id="ex6" type="text" data-slider-min="-5" data-slider-max="20" data-slider-step="1" data-slider-value="3">
+                  
+                  <span id="ex6CurrentSliderValLabel">Current Slider Value: <span id="ex6SliderVal">3</span></span>
                 </div>
                 
                 <div class="form-row">
                   <label for="customRange1">Maximum Distance</label>
-                   <input type="range" class="custom-range" id="myDistanceRange" type="text" min="0" max="100" data-slider-step="1" value="50" >
-                   <p>Current Slider Value:$ <span id="distancedemo"></span></p>
-                   <script>
-                        var distanceslider = document.getElementById("myDistanceRange");
-                        var distanceoutput = document.getElementById("distancedemo");
-                        distanceoutput.innerHTML = distanceslider.value;
-                        distanceslider.oninput = function() {
-                            distanceoutput.innerHTML = this.value;
-                        }
-                    </script>
+                  <input type="range" class="custom-range" id="customRange1">
+                  <label for="customRange1">$1000</label> 
                 </div>
                 </div>
               </div>

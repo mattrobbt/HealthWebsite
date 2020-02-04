@@ -4,7 +4,8 @@
   "description": "",
   "main": "bootstrap-testing.js",
   "scripts": {
-    "test": "mocha --watch || true"
+    "travis-test": "mocha --recursive",
+    "test": "mocha --watch --recursive"
   },
   "author": "",
   "license": "ISC",

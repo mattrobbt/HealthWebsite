@@ -2,10 +2,10 @@ jobs:
   include:
     - language: node_js
     node_js:
-      - 10
+      - "node"
     before_install:
     - cd Software_Code/client
     install:
       - npm install
     script:
-      - npm test
+      - npm run travis-test

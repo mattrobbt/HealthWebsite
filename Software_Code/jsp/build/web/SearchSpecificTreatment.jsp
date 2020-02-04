@@ -15,8 +15,7 @@
     <body>
         <form action="SearchSpecificTreatment.jsp" method="post">
                 Search:<br><input type="text" name="Search" value="">
-                <input type="radio" name="id" value="id" checked="checked"> Search By Procedure ID<br>
-                <input type="radio" name="name" value="name"> Search By Procedure Name<br>
+                
                 <input type="submit" value="Submit">
             </form> 
         </form>
@@ -29,13 +28,13 @@
             response.addCookie(SearchResult);
             out.print(request.getParameter("Search"));
             List<Treatment> result=new ArrayList<Treatment>();
-            if(request.getParameter("id")!=null){
-                
-                result=item.runDbQueryBySearchProcedureID(request.getParameter("Search"));
+            if(request.getParameter("Search")!=null){
+               
+                result=item.runDbQueryBySearchProcedure(request.getParameter("Search"));out.print("enter");
             }
             else{
                 
-                result=item.runDbQueryBySearchProcedureName(request.getParameter("Search"));
+                out.print("no search input");
             }
             int index=1;
             for(Treatment obj:result){

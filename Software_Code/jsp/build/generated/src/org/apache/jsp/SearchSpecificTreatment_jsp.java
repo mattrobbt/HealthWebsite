@@ -69,8 +69,7 @@ public final class SearchSpecificTreatment_jsp extends org.apache.jasper.runtime
       out.write("    <body>\n");
       out.write("        <form action=\"SearchSpecificTreatment.jsp\" method=\"post\">\n");
       out.write("                Search:<br><input type=\"text\" name=\"Search\" value=\"\">\n");
-      out.write("                <input type=\"radio\" name=\"id\" value=\"id\" checked=\"checked\"> Search By Procedure ID<br>\n");
-      out.write("                <input type=\"radio\" name=\"name\" value=\"name\"> Search By Procedure Name<br>\n");
+      out.write("                \n");
       out.write("                <input type=\"submit\" value=\"Submit\">\n");
       out.write("            </form> \n");
       out.write("        </form>\n");
@@ -84,13 +83,13 @@ public final class SearchSpecificTreatment_jsp extends org.apache.jasper.runtime
             response.addCookie(SearchResult);
             out.print(request.getParameter("Search"));
             List<Treatment> result=new ArrayList<Treatment>();
-            if(request.getParameter("id")!=null){
-                
-                result=item.runDbQueryBySearchProcedureID(request.getParameter("Search"));
+            if(request.getParameter("Search")!=null){
+               
+                result=item.runDbQueryBySearchProcedure(request.getParameter("Search"));out.print("enter");
             }
             else{
                 
-                result=item.runDbQueryBySearchProcedureName(request.getParameter("Search"));
+                out.print("no search input");
             }
             int index=1;
             for(Treatment obj:result){

@@ -28,7 +28,7 @@ public class DbConTemplate {
 
             connect = DriverManager
                     .getConnection("jdbc:mysql://silva.computing.dundee.ac.uk:3306","19agileteam16","3244.at16.4423");
-            System.out.println("got here");
+            
         }
         catch (SQLException e) {
             System.out.println("connection failed " + e.getMessage());

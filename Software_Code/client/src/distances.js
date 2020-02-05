@@ -27,7 +27,19 @@ const calculateDistance = (location1, location2) => {
   return Math.round(d / 1000);
 };
 
+const sortLocations = () => {};
+
+const calculateDistances = (userLocation, locations) => {
+  distances = [];
+  for (let i = 0; i < locations.length; i++) {
+    distances[i] = calculateDistance(userLocation, locations[i].location);
+  }
+  return distances;
+};
+
 module.exports = {
   degreesToRadians: degreesToRadians,
-  calculateDistance: calculateDistance
+  calculateDistance: calculateDistance,
+  sortLocations: sortLocations,
+  calculateDistances: calculateDistances
 };

@@ -2,7 +2,7 @@ const { assert } = require('chai');
 const {
   sortLocations,
   calculateDistances,
-  sortDistances
+  sortByDistance
 } = require('../src/distances');
 
 /**
@@ -66,7 +66,7 @@ describe('sortByDistance', () => {
     // TODO: add reverse to be able to sort both ways to reverse
     it('should be sortable in ascending order', () => {
       metaInfo = calculateDistances(userLocation, metaInfo);
-      metaInfo = sortDistances(metaInfo, true);
+      metaInfo = sortByDistance(metaInfo, true);
       for (let i = 0; i < metaInfo.length - 1; i++) {
         assert.isAtMost(metaInfo[i].distance, metaInfo[i + 1].distance);
       }
@@ -74,7 +74,7 @@ describe('sortByDistance', () => {
 
     it('should be sortable in descending order', () => {
       metaInfo = calculateDistances(userLocation, metaInfo);
-      metaInfo = sortDistances(metaInfo, false);
+      metaInfo = sortByDistance(metaInfo, false);
       for (let i = 0; i < metaInfo.length - 1; i++) {
         assert.isAtLeast(metaInfo[i].distance, metaInfo[i + 1].distance);
       }

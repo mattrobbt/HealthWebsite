@@ -29,7 +29,7 @@ const calculateDistance = (location1, location2) => {
 
 const sortLocations = () => {};
 
-const sortDistances = (metaInfo, ascending) => {
+const sortByDistance = (metaInfo, ascending) => {
   // move out of here?
   const ascendingSort = (a, b) => {
     return a.distance - b.distance;
@@ -53,7 +53,7 @@ const calculateDistances = (userLocation, metaInfo) => {
 module.exports = {
   degreesToRadians: degreesToRadians,
   calculateDistance: calculateDistance,
-  sortDistances: sortDistances,
+  sortByDistance: sortByDistance,
   sortLocations: sortLocations,
   calculateDistances: calculateDistances
 };

@@ -48,3 +48,26 @@ Mengqi:Yesterday she worked on feedback and planed sprint 2 and today she will b
 Matt: Yesterday he worked on accessibility to get the website display properly on mobile and he will be working on implementing reviews functionality.
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+## Wednesday 05/02/2020 - Scrum Meeting summary
+The Scrum Master for this meeting was Rauf
+### Members Present:
+Charlie Hewitt, Rauf Tarar Sultana, Daniel Scheitler, Mengqi Jiang, Matt Robb
+
+### Members Not Present:
+
+### Apologies:
+
+### Summary of Conversation:
+Charlie: Yesterday he worked on distance logic in javascript this will help with sort by distance function and today he will be working on dispalying pins with the actual data from database.
+
+Rauf: Yesterday after finishing of the agile summary I worked on setting up the travis for automated TDD I had some issues but Charlie was able to help and now some tests are running every time we push code and all of them are passing so far and ater I fixed some issues on github and today I will be working on getting the JUnit testing working with travis and convert locations into coordinates and clean up the github.
+
+Daniel:Yesterday he finished the retrospective and other documentation for the submission and today he will be pair programing with Matt to conect the backend to frontend. 
+
+Mengqi:Yesterday she worked getting the results from the search and the actual search function and today she will be working on "sort by" functions.
+
+Matt: Yesterday he worked on getting the search results to display in the cards on the website and the search aswell and today he will be working on the sort functions and display results on the different pages.
+
+---------------------------------------------------------------------------------------------------------------------------------
+

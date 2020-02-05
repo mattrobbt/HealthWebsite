@@ -16,8 +16,8 @@ const createMap = () => {
 const addMarker = (map, position, content) => {
   const marker = new google.maps.Marker({
     map: map,
-    position: position
-    //animation: google.maps.Animation.DROP
+    position: position,
+    animation: google.maps.Animation.DROP
   });
 
   marker.addListener('click', () => {

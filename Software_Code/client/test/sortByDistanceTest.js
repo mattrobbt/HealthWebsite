@@ -16,32 +16,32 @@ let userLocation = {
 };
 
 // fake locations to be sorted
-let locations = [
+let metaInfo = [
   {
     id: 1,
     location: {
       lat: 50,
       lng: 60
-    }
+    },
+    distance: undefined
   },
   {
     id: 2,
     location: {
       lat: 60,
       lng: 70
-    }
+    },
+    distance: undefined
   },
   {
     id: 3,
     location: {
       lat: 34,
       lng: 56
-    }
+    },
+    distance: undefined
   }
 ];
-
-// output variable
-let distances = [];
 
 describe('sortByDistance', () => {
   describe('sortLocations', () => {
@@ -55,25 +55,28 @@ describe('sortByDistance', () => {
       assert.isDefined(calculateDistances);
     });
 
-    it('should populate the distances array (length should = locations.length)', () => {
-      distances = calculateDistances(userLocation, locations);
-      assert.equal(distances.length, locations.length);
+    it('should populate the distances in metainfo array (none should be undefined)', () => {
+      distances = calculateDistances(userLocation, metaInfo);
+
+      for (let i = 0; i < metaInfo.length; i++) {
+        assert.isDefined(metaInfo[i].distance);
+      }
     });
 
     // TODO: add reverse to be able to sort both ways to reverse
     it('should be sortable in ascending order', () => {
-      distances = calculateDistances(userLocation, locations);
-      distances = sortDistances(distances, true);
-      for (let i = 0; i < distances.length - 1; i++) {
-        assert.isAtMost(distances[i], distances[i + 1]);
+      metaInfo = calculateDistances(userLocation, metaInfo);
+      metaInfo = sortDistances(metaInfo, true);
+      for (let i = 0; i < metaInfo.length - 1; i++) {
+        assert.isAtMost(metaInfo[i].distance, metaInfo[i + 1].distance);
       }
     });
 
     it('should be sortable in descending order', () => {
-      distances = calculateDistances(userLocation, locations);
-      distances = sortDistances(distances, false);
-      for (let i = 0; i < distances.length - 1; i++) {
-        assert.isAtLeast(distances[i], distances[i + 1]);
+      metaInfo = calculateDistances(userLocation, metaInfo);
+      metaInfo = sortDistances(metaInfo, false);
+      for (let i = 0; i < metaInfo.length - 1; i++) {
+        assert.isAtLeast(metaInfo[i].distance, metaInfo[i + 1].distance);
       }
     });
   });

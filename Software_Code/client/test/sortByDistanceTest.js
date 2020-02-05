@@ -1,9 +1,5 @@
 const { assert } = require('chai');
-const {
-  sortLocations,
-  calculateDistances,
-  sortByDistance
-} = require('../src/distances');
+const { calculateDistances, sortByDistance } = require('../src/distances');
 
 /**
  * Tests for src/distances are over two files, due to a slight inconvenience with includes
@@ -43,13 +39,7 @@ let metaInfo = [
   }
 ];
 
-describe('sortByDistance', () => {
-  describe('sortLocations', () => {
-    it('should be defined', () => {
-      assert.isDefined(sortLocations);
-    });
-  });
-
+describe('distances (sorting)', () => {
   describe('calculateDistances', () => {
     it('should be defined', () => {
       assert.isDefined(calculateDistances);
@@ -57,12 +47,13 @@ describe('sortByDistance', () => {
 
     it('should populate the distances in metainfo array (none should be undefined)', () => {
       distances = calculateDistances(userLocation, metaInfo);
-
       for (let i = 0; i < metaInfo.length; i++) {
         assert.isDefined(metaInfo[i].distance);
       }
     });
+  });
 
+  describe('sortByDistance', () => {
     // TODO: add reverse to be able to sort both ways to reverse
     it('should be sortable in ascending order', () => {
       metaInfo = calculateDistances(userLocation, metaInfo);

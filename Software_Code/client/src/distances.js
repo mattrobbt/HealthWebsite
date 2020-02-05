@@ -27,8 +27,6 @@ const calculateDistance = (location1, location2) => {
   return Math.round(d / 1000);
 };
 
-const sortLocations = () => {};
-
 const sortByDistance = (metaInfo, ascending) => {
   // move out of here?
   const ascendingSort = (a, b) => {
@@ -54,6 +52,5 @@ module.exports = {
   degreesToRadians: degreesToRadians,
   calculateDistance: calculateDistance,
   sortByDistance: sortByDistance,
-  sortLocations: sortLocations,
   calculateDistances: calculateDistances
 };

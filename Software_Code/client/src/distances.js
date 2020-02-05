@@ -29,6 +29,12 @@ const calculateDistance = (location1, location2) => {
 
 const sortLocations = () => {};
 
+const sortDistances = distances => {
+  return distances.sort((a, b) => {
+    return a - b;
+  });
+};
+
 const calculateDistances = (userLocation, locations) => {
   distances = [];
   for (let i = 0; i < locations.length; i++) {
@@ -40,6 +46,7 @@ const calculateDistances = (userLocation, locations) => {
 module.exports = {
   degreesToRadians: degreesToRadians,
   calculateDistance: calculateDistance,
+  sortDistances: sortDistances,
   sortLocations: sortLocations,
   calculateDistances: calculateDistances
 };

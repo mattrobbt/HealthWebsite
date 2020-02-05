@@ -1,5 +1,9 @@
 const { assert } = require('chai');
-const { sortLocations, calculateDistances } = require('../src/distances');
+const {
+  sortLocations,
+  calculateDistances,
+  sortDistances
+} = require('../src/distances');
 
 /**
  * Tests for src/distances are over two files, due to a slight inconvenience with includes
@@ -56,6 +60,7 @@ describe('sortByDistance', () => {
       // TODO: add reverse to be able to sort both ways to reverse
       it('should be sorted in ascending order', () => {
         distances = calculateDistances(userLocation, locations);
+        distances = sortDistances(distances);
         for (let i = 0; i < distances.length - 1; i++) {
           assert.isAtMost(distances[i], distances[i + 1]);
         }

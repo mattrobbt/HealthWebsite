@@ -242,7 +242,7 @@ pageContext.setAttribute("user",name,PageContext.SESSION_SCOPE);
         
         <!-- Modal body -->
         <div class="modal-body">
-          <embed class="card-fluid" id="map" src="maps.html" width=200 height=200 />
+          <embed class="card-fluid" id="map" src="./maps.html" width=200 height=200 />
         </div> 
       </div>
     </div>

@@ -191,10 +191,10 @@ public final class indextest_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        \n");
       out.write("          <div class=\"col offset-4\" id=\"main\">\n");
       out.write("            \n");
-      out.write("          <!-- Procedure/hopsital information cards-->\n");
+      out.write("           Procedure/hopsital information cards\n");
       out.write("          <div class=\"container-fluid offset-1\">  \n");
       out.write("            \n");
-      out.write("          <!--Card 1-->\n");
+      out.write("          Card 1\n");
       out.write("          <div class=\"card col-lg-10 col\"> \n");
       out.write("              <div class=\"card-body\" id=\"card1\">\n");
       out.write("              <a class=\"col-lg-10 col offset-11\" data-toggle=\"modal\" data-target=\"#myModal\"><img  id=\"map\" src=\"images/map.png\" style=\"max-width: 10%;\" ></a>\n");
@@ -214,7 +214,7 @@ public final class indextest_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("              </div>\n");
       out.write("            </div>\n");
       out.write("          </div>\n");
-      out.write("          <!--Card1 END-->\n");
+      out.write("          Card1 END\n");
       out.write("\n");
       out.write("          <div class=\"card col-lg-10 col\">\n");
       out.write("            <div class=\"card-body\" id=\"card2\">\n");
@@ -316,7 +316,7 @@ public final class indextest_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("          </div>\n");
       out.write("        </div>  \n");
       out.write("        \n");
-      out.write("          <!-- Page Navigation -->\n");
+      out.write("           Page Navigation \n");
       out.write("      </br> \n");
       out.write("      <nav aria-label=\"Page navigation example\">\n");
       out.write("        <ul class=\"pagination\">\n");

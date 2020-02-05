@@ -2,10 +2,9 @@
 <%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
 <%@ page import="java.util.ArrayList"%>
 <%@ page import="java.lang.*"%>
-<%@ page import="data.FilterByPrice"%>
 <%@ page import="htmlgeneration.Treatment"%>
 <%@ page import="data.DbConTemplate"%>
-<%@ page import="data.SearchSpecificTreatment"%>
+<%@ page import="data.SortingByPrice"%>
 <html>
    <head>
       <title>SELECT Operation</title>
@@ -56,7 +55,7 @@
 
                 <div class="slidecontainer">
                   <label>Maximum Price</label>
-                  <input type="range" class="custom-range" name="pricerange" min="1" max="1000000" onchange="updateTextInput(this.value);">
+                  <input type="range" class="custom-range" name="pricerange" min="1" max="100000" onchange="updateTextInput(this.value);">
                   <label>$<input type="text" id="textInput" value="500000" style="border: none;"></label>
                 </div>
              
@@ -74,29 +73,47 @@
             <button type="submit" class="btn btn-primary btn-block">Submit</button>
           </div>
         </form>
-       
+        <%@ page import="htmlgeneration.TreatmentCardGenerator"%>
        <%
            Cookie cookie=null;
            Cookie[] cookies=null;
            cookies=request.getCookies();
            if(cookies!=null){
                out.print("Find Cookies");
-               for (int i = 0; i < cookies.length; i++) {
-               cookie = cookies[i];
+               
+               cookie = cookies[1];
                out.print("Name : " + cookie.getName( ) + ",  ");
                out.print("Value: " + cookie.getValue( )+" <br/>");
-            }
            }else {
             out.println("<h2>No cookies founds</h2>");
          }
            
           
            String search=request.getParameter("search");
-           String maxprice=request.getParameter("pricerange");
+           String maxprice_String=request.getParameter("pricerange");
            out.print(search);
-           out.print(maxprice);
+           out.print(maxprice_String);
+           List<Treatment> result=new ArrayList<Treatment>();
+           SortingByPrice item=new SortingByPrice();
+           out.print(request.getParameter("price"));
+           if(request.getParameter("price").equals("pricehightolow"))
+           {
+               int maxprice=Integer.parseInt(maxprice_String);
+               result=item.sortingByPriceHightoLow(cookie.getValue(), maxprice);
+           }else if(request.getParameter("price").equals("pricelowtohigh")){
+               int maxprice=Integer.parseInt(maxprice_String);
+               result=item.sortingByPriceLowtoHigh(cookie.getValue(), maxprice);
+           }
+           int index=1;
+           for(Treatment obj:result){
+                TreatmentCardGenerator test=new TreatmentCardGenerator(obj);
+                String html=test.generateCard(index);
+                out.print(html);
+                index++;
+                if(index==5)break;
+            }
            %>
- <%   
+<%   
   
 String name=request.getParameter("uname");  
 out.print("Welcome "+name);  

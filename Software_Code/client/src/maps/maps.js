@@ -1,5 +1,5 @@
 /**
- * Internal functionality
+ * Internal functionality -- no tests for this logic as most of it is DOM based or relies on the Google Maps API
  */
 
 const createMap = () => {

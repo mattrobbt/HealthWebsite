@@ -28,7 +28,6 @@ const calculateDistance = (location1, location2) => {
 };
 
 const sortByDistance = (metaInfo, ascending) => {
-  // move out of here?
   const ascendingSort = (a, b) => {
     return a.distance - b.distance;
   };
@@ -40,6 +39,7 @@ const sortByDistance = (metaInfo, ascending) => {
   return metaInfo.sort(ascending ? ascendingSort : descendingSort);
 };
 
+/** currently still in KM not miles! */
 const calculateDistances = (userLocation, metaInfo) => {
   for (let i = 0; i < metaInfo.length; i++) {
     let distance = calculateDistance(userLocation, metaInfo[i].location);

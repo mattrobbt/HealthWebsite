@@ -1,3 +1,7 @@
+/**
+ * Internal functionality
+ */
+
 const createMap = () => {
   return new google.maps.Map(document.getElementById('map'), {
     zoom: 5,
@@ -28,11 +32,7 @@ const addMarker = (map, position, content) => {
   });
 };
 
-/** todo: add address */
-// const createMarkerContent = (hospital, procedure, price) => {
-//   return `<div><h3>${hospital}</h3><h4>${procedure}</h4><p>${price}</p></div>`;
-// };
-
+// TODO: update metainfo to store & use name, price //address?
 const createMarkerContent = metaInfoItem => {
   return `<div><h3>${metaInfoItem.id}</h3><h4>${metaInfoItem.distance} miles (${metaInfoItem.location.lat}, ${metaInfoItem.location.lng})</h4></div>`;
 };
@@ -43,43 +43,63 @@ const addMarkersFromMetaInfo = (map, metaInfo) => {
   }
 };
 
+// radius in metres
+const addCircle = (map, radius, location) => {
+  const circle = new google.maps.Circle({
+    strokeColor: '#16aaf0',
+    strokeOpacity: 0.3,
+    strokeWeight: 2,
+    fillColor: '#16aaf0',
+    map: map,
+    center: location,
+    radius: radius
+  });
+
+  return circle;
+};
+
+const removeCircle = circle => {
+  circle.setMap(null);
+  circle = null;
+};
+
 const updateDistances = (userLocation, metaInfo) => {
   return calculateDistances(userLocation, metaInfo);
 };
 
-/** calling functions for testing */
-let metaInfo = [
-  {
-    id: 1,
+/** To be used from java in generated code to populate metaInfo */
+const addToMetaInfo = (metaInfo, id, lat, lng) => {
+  const newMetaInfoItem = {
+    id: id,
     location: {
-      lat: 50,
-      lng: 60
+      lat: lat,
+      lng: lng
     },
     distance: undefined
-  },
-  {
-    id: 2,
-    location: {
-      lat: 60,
-      lng: 70
-    },
-    distance: undefined
-  },
-  {
-    id: 3,
-    location: {
-      lat: 34,
-      lng: 56
-    },
-    distance: undefined
-  }
-];
+  };
+  metaInfo.push(newMetaInfoItem);
 
+  return metaInfo;
+};
+
+/**
+ *  example code to be called externally (Java)
+ */
+
+// initialising & populating metaInfo
+let metaInfo = [];
+metaInfo = addToMetaInfo(metaInfo, 1, 45, -120);
+metaInfo = addToMetaInfo(metaInfo, 2, 34, -90);
+metaInfo = addToMetaInfo(metaInfo, 3, 40, -80);
+metaInfo = addToMetaInfo(metaInfo, 4, 27, -82);
+
+// initialising map
 const map = createMap();
+
+// getting location data, defaults to central USA if geolocation is rejected
 let userLocation;
 let tempUserLocation = geoLocation(map);
 
-// set user location
 if (tempUserLocation !== undefined) {
   userLocation = tempUserLocation;
 } else {
@@ -89,11 +109,16 @@ if (tempUserLocation !== undefined) {
   };
 }
 
-console.log(userLocation);
-
+// calculate & add distances to metaInfo
 metaInfo = updateDistances(userLocation, metaInfo);
-console.log(metaInfo);
 
+// display markers on map
+addMarker(map, userLocation, 'You are here');
 addMarkersFromMetaInfo(map, metaInfo);
 
-addMarker(map, userLocation, 'You are here');
+// optional circle for filter
+let distanceRange = 1000000;
+const circle = addCircle(map, distanceRange, userLocation);
+
+// remove circle
+//removeCircle(circle);

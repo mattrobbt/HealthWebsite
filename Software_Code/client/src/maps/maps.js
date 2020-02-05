@@ -17,6 +17,7 @@ const addMarker = (map, position, content) => {
   const marker = new google.maps.Marker({
     map: map,
     position: position
+    //animation: google.maps.Animation.DROP
   });
 
   marker.addListener('click', () => {
@@ -28,35 +29,71 @@ const addMarker = (map, position, content) => {
 };
 
 /** todo: add address */
-const createMarkerContent = (hospital, procedure, price) => {
-  return `<div><h3>${hospital}</h3><h4>${procedure}</h4><p>${price}</p></div>`;
+// const createMarkerContent = (hospital, procedure, price) => {
+//   return `<div><h3>${hospital}</h3><h4>${procedure}</h4><p>${price}</p></div>`;
+// };
+
+const createMarkerContent = metaInfoItem => {
+  return `<div><h3>${metaInfoItem.id}</h3><h4>${metaInfoItem.distance} miles (${metaInfoItem.location.lat}, ${metaInfoItem.location.lng})</h4></div>`;
 };
+
+const addMarkersFromMetaInfo = (map, metaInfo) => {
+  for (let i = 0; i < metaInfo.length; i++) {
+    addMarker(map, metaInfo[i].location, createMarkerContent(metaInfo[i]));
+  }
+};
+
+const updateDistances = (userLocation, metaInfo) => {
+  return calculateDistances(userLocation, metaInfo);
+};
+
 /** calling functions for testing */
+let metaInfo = [
+  {
+    id: 1,
+    location: {
+      lat: 50,
+      lng: 60
+    },
+    distance: undefined
+  },
+  {
+    id: 2,
+    location: {
+      lat: 60,
+      lng: 70
+    },
+    distance: undefined
+  },
+  {
+    id: 3,
+    location: {
+      lat: 34,
+      lng: 56
+    },
+    distance: undefined
+  }
+];
+
 const map = createMap();
-geoLocation(map);
+let userLocation;
+let tempUserLocation = geoLocation(map);
 
-const markerContent1 = createMarkerContent(
-  'University of Alabama Hospital',
-  'Heart surgery',
-  '$273,737'
-);
-const markerContent2 = createMarkerContent(
-  'Mayo Clinic Hospital',
-  'Heart surgery',
-  '$226,998'
-);
-const markerContent3 = createMarkerContent(
-  'Baptist Health Medical Center Little Rock',
-  'Heart surgery',
-  '$162,530'
-);
-const markerContent4 = createMarkerContent(
-  'UC San Diego Health Hillcrest',
-  'Heart surgery',
-  '$319,044'
-);
+// set user location
+if (tempUserLocation !== undefined) {
+  userLocation = tempUserLocation;
+} else {
+  userLocation = {
+    lat: 38,
+    lng: -98
+  };
+}
 
-addMarker(map, { lat: 33.5065, lng: -86.803 }, markerContent1);
-addMarker(map, { lat: 33.6591, lng: -111.9565 }, markerContent2);
-addMarker(map, { lat: 34.7443, lng: -92.3808 }, markerContent3);
-addMarker(map, { lat: 32.7551, lng: -117.1659 }, markerContent4);
+console.log(userLocation);
+
+metaInfo = updateDistances(userLocation, metaInfo);
+console.log(metaInfo);
+
+addMarkersFromMetaInfo(map, metaInfo);
+
+addMarker(map, userLocation, 'You are here');

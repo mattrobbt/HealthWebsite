@@ -22,13 +22,13 @@
                      
 <!--                     rename these two labels as price-->
 
-                  <input type="radio" class="form-check-input" id="materialGroupExample1" name="price" value="pricelowtohigh">
+                  <input type="radio" class="form-check-input" id="materialGroupExample1" name="price" value="1">
                   <label class="form-check-label" for="materialGroupExample1">Price (Low - High)</label>
                   </div>
 
                   <!-- Group of material radios - option 2 -->
                   <div class="form-check">
-                  <input type="radio" class="form-check-input" id="materialGroupExample2" name="price" value="pricehightolow" checked>
+                  <input type="radio" class="form-check-input" id="materialGroupExample2" name="price" value="0" checked>
                   <label class="form-check-label" for="materialGroupExample2">Price (High - Low)</label>
                   </div>
 
@@ -95,23 +95,39 @@
            out.print(maxprice_String);
            List<Treatment> result=new ArrayList<Treatment>();
            SortingByPrice item=new SortingByPrice();
+           out.print("///" + request.getParameter("price"));
+           String price_String = request.getParameter("price");
+           out.print(price_String == null);
            out.print(request.getParameter("price"));
-           if(request.getParameter("price").equals("pricehightolow"))
+           
+           if (price_String != null){
+               int price=Integer.parseInt(price_String);
+               out.print("==============================" + price);
+
+ 
+     
+           if(price==1)
            {
                int maxprice=Integer.parseInt(maxprice_String);
+               out.print("enter1");
                result=item.sortingByPriceHightoLow(cookie.getValue(), maxprice);
-           }else if(request.getParameter("price").equals("pricelowtohigh")){
+           }else if(price==0){
+               out.print("enter2");
                int maxprice=Integer.parseInt(maxprice_String);
-               result=item.sortingByPriceLowtoHigh(cookie.getValue(), maxprice);
-           }
+               result=item.sortingByPriceLowtoHigh(cookie.getValue(),maxprice);
+              }
            int index=1;
            for(Treatment obj:result){
-                TreatmentCardGenerator test=new TreatmentCardGenerator(obj);
-                String html=test.generateCard(index);
+               TreatmentCardGenerator test=new TreatmentCardGenerator(obj);
+               String html=test.generateCard(index);
                 out.print(html);
                 index++;
                 if(index==5)break;
             }
+           }
+          // out.print(Integer.parseInt("6455546"));
+        //  out.print("==============" + Integer.parseInt(price_String) + "=======================");
+
            %>
 <%   
   

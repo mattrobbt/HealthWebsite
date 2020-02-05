@@ -10,10 +10,10 @@ import javax.servlet.http.*;
 import javax.servlet.*;
 import java.util.ArrayList;
 import java.lang.*;
-import data.FilterByPrice;
 import htmlgeneration.Treatment;
 import data.DbConTemplate;
-import data.SearchSpecificTreatment;
+import data.SortingByPrice;
+import htmlgeneration.TreatmentCardGenerator;
 
 public final class SortAndFilter_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -59,7 +59,6 @@ public final class SortAndFilter_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("\n");
       out.write("\n");
       out.write("\n");
-      out.write("\n");
       out.write("<html>\n");
       out.write("   <head>\n");
       out.write("      <title>SELECT Operation</title>\n");
@@ -77,13 +76,13 @@ public final class SortAndFilter_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("                     \n");
       out.write("<!--                     rename these two labels as price-->\n");
       out.write("\n");
-      out.write("                  <input type=\"radio\" class=\"form-check-input\" id=\"materialGroupExample1\" name=\"price\" value=\"pricelowtohigh\">\n");
+      out.write("                  <input type=\"radio\" class=\"form-check-input\" id=\"materialGroupExample1\" name=\"price\" value=\"1\">\n");
       out.write("                  <label class=\"form-check-label\" for=\"materialGroupExample1\">Price (Low - High)</label>\n");
       out.write("                  </div>\n");
       out.write("\n");
       out.write("                  <!-- Group of material radios - option 2 -->\n");
       out.write("                  <div class=\"form-check\">\n");
-      out.write("                  <input type=\"radio\" class=\"form-check-input\" id=\"materialGroupExample2\" name=\"price\" value=\"pricehightolow\" checked>\n");
+      out.write("                  <input type=\"radio\" class=\"form-check-input\" id=\"materialGroupExample2\" name=\"price\" value=\"0\" checked>\n");
       out.write("                  <label class=\"form-check-label\" for=\"materialGroupExample2\">Price (High - Low)</label>\n");
       out.write("                  </div>\n");
       out.write("\n");
@@ -110,7 +109,7 @@ public final class SortAndFilter_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("\n");
       out.write("                <div class=\"slidecontainer\">\n");
       out.write("                  <label>Maximum Price</label>\n");
-      out.write("                  <input type=\"range\" class=\"custom-range\" name=\"pricerange\" min=\"1\" max=\"1000000\" onchange=\"updateTextInput(this.value);\">\n");
+      out.write("                  <input type=\"range\" class=\"custom-range\" name=\"pricerange\" min=\"1\" max=\"100000\" onchange=\"updateTextInput(this.value);\">\n");
       out.write("                  <label>$<input type=\"text\" id=\"textInput\" value=\"500000\" style=\"border: none;\"></label>\n");
       out.write("                </div>\n");
       out.write("             \n");
@@ -128,17 +127,64 @@ public final class SortAndFilter_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("            <button type=\"submit\" class=\"btn btn-primary btn-block\">Submit</button>\n");
       out.write("          </div>\n");
       out.write("        </form>\n");
-      out.write("       ");
-      org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "SearchSpecificTreatment.jsp", out, false);
-      out.write("\n");
+      out.write("        \n");
       out.write("       ");
 
+           Cookie cookie=null;
+           Cookie[] cookies=null;
+           cookies=request.getCookies();
+           if(cookies!=null){
+               out.print("Find Cookies");
+               
+               cookie = cookies[1];
+               out.print("Name : " + cookie.getName( ) + ",  ");
+               out.print("Value: " + cookie.getValue( )+" <br/>");
+           }else {
+            out.println("<h2>No cookies founds</h2>");
+         }
+           
+          
            String search=request.getParameter("search");
-           String maxprice=request.getParameter("pricerange");
-           out.print(maxprice);
+           String maxprice_String=request.getParameter("pricerange");
+           out.print(search);
+           out.print(maxprice_String);
+           List<Treatment> result=new ArrayList<Treatment>();
+           SortingByPrice item=new SortingByPrice();
+           out.print("///" + request.getParameter("price"));
+           String price_String = request.getParameter("price");
+           out.print(price_String == null);
+           out.print(request.getParameter("price"));
+           
+           if (price_String != null){
+               int price=Integer.parseInt(price_String);
+               out.print("==============================" + price);
+
+ 
+     
+           if(price==1)
+           {
+               int maxprice=Integer.parseInt(maxprice_String);
+               out.print("enter1");
+               result=item.sortingByPriceHightoLow(cookie.getValue(), maxprice);
+           }else if(price==0){
+               out.print("enter2");
+               int maxprice=Integer.parseInt(maxprice_String);
+               result=item.sortingByPriceLowtoHigh(cookie.getValue(),maxprice);
+              }
+           int index=1;
+           for(Treatment obj:result){
+               TreatmentCardGenerator test=new TreatmentCardGenerator(obj);
+               String html=test.generateCard(index);
+                out.print(html);
+                index++;
+                if(index==5)break;
+            }
+           }
+          // out.print(Integer.parseInt("6455546"));
+        //  out.print("==============" + Integer.parseInt(price_String) + "=======================");
+
            
       out.write('\n');
-      out.write(' ');
    
   
 String name=request.getParameter("uname");  

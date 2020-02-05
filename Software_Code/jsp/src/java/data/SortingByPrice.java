@@ -18,17 +18,28 @@ public class SortingByPrice {
     
     DbConTemplate item=new DbConTemplate();  
     
-    public List<Treatment> sortingByPriceHightoLowUsingID(String newProcedureID) {
+    public List<Treatment> sortingByPriceHightoLow(String searchProcedure,int maxprice) {
        
-       String query= "call 19agileteam16db.sortingByPriceHightoLowUsingID('"+newProcedureID+"');"; 
+       String query= "select * "
+               + "from 19agileteam16db.treatment as treatment "
+               + "inner join 19agileteam16db.provider as provider on treatment.providerID=provider.providerID "
+               + "inner join 19agileteam16db.procedures as procedures on treatment.proceduresID=procedures.proceduresID "
+               + "where (procedures.proceduresID=\""+searchProcedure+"\" or procedures.description like '%"+searchProcedure+"%') and "
+               + "treatment.AveragePayments<"+maxprice
+               + " order by treatment.AveragePayments desc"; 
        List<Treatment> result = item.dbQuery(query);
        return result;
     }
     
-    public List<Treatment> sortingByPriceLowtoHighUsingID(String newProcedureID) {
+    public List<Treatment> sortingByPriceLowtoHigh(String searchProcedure,int maxprice) {
        
-       String query="call 19agileteam16db.sortingByPriceLowtoHighUsingID('"+newProcedureID+"')";  
-       System.out.print(query);
+       String query= "select * "
+               + "from 19agileteam16db.treatment as treatment "
+               + "inner join 19agileteam16db.provider as provider on treatment.providerID=provider.providerID "
+               + "inner join 19agileteam16db.procedures as procedures on treatment.proceduresID=procedures.proceduresID "
+               + "where (procedures.proceduresID=\""+searchProcedure+"\" or procedures.description like '%"+searchProcedure+"%') and "
+               + "treatment.AveragePayments<"+maxprice
+               + " order by treatment.AveragePayments asc"; 
        List<Treatment> result = item.dbQuery(query);
        return result;
     }
@@ -48,8 +59,8 @@ public class SortingByPrice {
        return result;
     }public static void main(String args[]){
         SortingByPrice item=new SortingByPrice();
-        List<Treatment> result=item.sortingByPriceHightoLowUsingID("375");
-        List<Treatment> result1=item.sortingByPriceLowtoHighUsingID("375");
+        List<Treatment> result=item.sortingByPriceHightoLow("375",10000);
+        List<Treatment> result1=item.sortingByPriceLowtoHigh("375",10000);
         List<Treatment> result2=item.sortingByPriceHightoLowUsingName("HEART");
         List<Treatment> result3=item.sortingByPriceLowtoHighUsingName("HEART");
         for(Treatment obj:result){
@@ -62,6 +73,3 @@ public class SortingByPrice {
     }
 }
  
-    
-    
-

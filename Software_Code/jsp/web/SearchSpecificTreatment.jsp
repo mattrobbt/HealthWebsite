@@ -174,9 +174,9 @@ pageContext.setAttribute("user",name,PageContext.SESSION_SCOPE);
 <%   
   
 String name1=request.getParameter("uname");  
-out.print("Welcome "+name);  
+out.print("Welcome "+name1);  
   
-pageContext.setAttribute("user",name,PageContext.SESSION_SCOPE);  
+pageContext.setAttribute("user",name1,PageContext.SESSION_SCOPE);  
   
 %> 
    </body>

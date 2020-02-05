@@ -199,14 +199,14 @@
                 SearchResult.setMaxAge(60*60*24);
                 response.addCookie(SearchResult);
                 
-                out.println(request.getParameter("Search"));
+                //out.println(request.getParameter("Search"));
                 
                 List<Treatment> result=new ArrayList<Treatment>();
                 result=item.runDbQueryBySearchProcedure(request.getParameter("Search"));
                 
-                out.println("=====================enter Searching=====================");
+                //out.println("=====================enter Searching=====================");
                 
-                out.println("no search input");
+                //out.println("no search input");
                 int index=1;
                 for(Treatment obj:result){
                     TreatmentCardGenerator test=new TreatmentCardGenerator(obj);
@@ -222,7 +222,7 @@
  <%   
   
 String name=request.getParameter("uname");  
-out.print("Welcome "+name);  
+//out.print("Welcome "+name);  
   
 pageContext.setAttribute("user",name,PageContext.SESSION_SCOPE);  
   
@@ -234,30 +234,30 @@ pageContext.setAttribute("user",name,PageContext.SESSION_SCOPE);
            cookies=request.getCookies();
            if(cookies!=null){
                
-               out.println("Find Cookies");
-               out.println("=====================enter Sorting=====================");
+               //out.println("Find Cookies");
+               //out.println("=====================enter Sorting=====================");
             
                for(int i=0;i<cookies.length;i++){
                    out.print(i);
                    cookie=cookies[i];
-                   out.print("Name : " + cookie.getName( ) + ",  ");
-                   out.print("Value: " + cookie.getValue( )+" <br/>");
+                   //out.print("Name : " + cookie.getName( ) + ",  ");
+                   //out.print("Value: " + cookie.getValue( )+" <br/>");
                    if(cookie.getName().equals("Search"))break;
                }
                
                
            }else {
-            out.println("<h2>No cookies founds</h2>");
+            //out.println("<h2>No cookies founds</h2>");
          }
            
            String search=request.getParameter("search");
            String maxprice_String=request.getParameter("pricerange");
-           out.println(search);
-           out.println(maxprice_String);
+           //out.println(search);
+           //out.println(maxprice_String);
            List<Treatment> result_SF=new ArrayList<Treatment>();
            SortingByPrice item_SF=new SortingByPrice();
            out.println(request.getParameter("price"));
-           out.println("====="+cookie.getValue()+"======");
+           //out.println("====="+cookie.getValue()+"======");
            if(request.getParameter("price")==null){
                
            }
@@ -286,7 +286,7 @@ pageContext.setAttribute("user",name,PageContext.SESSION_SCOPE);
 <%   
   
 String name1=request.getParameter("uname");  
-out.print("Welcome "+name1);  
+//out.print("Welcome "+name1);  
   
 pageContext.setAttribute("user",name1,PageContext.SESSION_SCOPE);  
   

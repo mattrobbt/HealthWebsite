@@ -213,7 +213,7 @@
                     String html=test.generateCard(index);
                     out.print(html);
                     index++;
-                    if(index==5)break;
+                    if(index==5);
                 }
                 
             }
@@ -238,7 +238,7 @@ pageContext.setAttribute("user",name,PageContext.SESSION_SCOPE);
                //out.println("=====================enter Sorting=====================");
             
                for(int i=0;i<cookies.length;i++){
-                   out.print(i);
+                   //out.print(i);
                    cookie=cookies[i];
                    //out.print("Name : " + cookie.getName( ) + ",  ");
                    //out.print("Value: " + cookie.getValue( )+" <br/>");
@@ -256,7 +256,7 @@ pageContext.setAttribute("user",name,PageContext.SESSION_SCOPE);
            //out.println(maxprice_String);
            List<Treatment> result_SF=new ArrayList<Treatment>();
            SortingByPrice item_SF=new SortingByPrice();
-           out.println(request.getParameter("price"));
+          // out.println(request.getParameter("price"));
            //out.println("====="+cookie.getValue()+"======");
            if(request.getParameter("price")==null){
                
@@ -265,22 +265,22 @@ pageContext.setAttribute("user",name,PageContext.SESSION_SCOPE);
            else if(request.getParameter("price").equals("pricehightolow"))
            {
                int maxprice=Integer.parseInt(maxprice_String);
-               out.println(maxprice);
+              // out.println(maxprice);
                result_SF=item_SF.sortingByPriceHightoLow(cookie.getValue(), maxprice);
            }else if(request.getParameter("price").equals("pricelowtohigh")){
                int maxprice=Integer.parseInt(maxprice_String);
-                              out.println(maxprice);
+                              //out.println(maxprice);
 
                result_SF=item_SF.sortingByPriceLowtoHigh(cookie.getValue(), maxprice);
            }
            int index_SF=1;
            for(Treatment obj_SF:result_SF){
-               out.print("generate card");
+               //out.print("generate card");
                 TreatmentCardGenerator test_SF=new TreatmentCardGenerator(obj_SF);
                 String html_SF=test_SF.generateCard(index_SF);
                 out.print(html_SF);
                 index_SF++;
-                if(index_SF==5)break;
+                if(index_SF==5);
             }
            %>
 <%   

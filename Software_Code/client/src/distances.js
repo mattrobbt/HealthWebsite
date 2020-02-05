@@ -29,25 +29,25 @@ const calculateDistance = (location1, location2) => {
 
 const sortLocations = () => {};
 
-const sortDistances = (distances, ascending) => {
+const sortDistances = (metaInfo, ascending) => {
   // move out of here?
   const ascendingSort = (a, b) => {
-    return a - b;
+    return a.distance - b.distance;
   };
 
   const descendingSort = (a, b) => {
-    return b - a;
+    return b.distance - a.distance;
   };
 
-  return distances.sort(ascending ? ascendingSort : descendingSort);
+  return metaInfo.sort(ascending ? ascendingSort : descendingSort);
 };
 
-const calculateDistances = (userLocation, locations) => {
-  distances = [];
-  for (let i = 0; i < locations.length; i++) {
-    distances[i] = calculateDistance(userLocation, locations[i].location);
+const calculateDistances = (userLocation, metaInfo) => {
+  for (let i = 0; i < metaInfo.length; i++) {
+    let distance = calculateDistance(userLocation, metaInfo[i].location);
+    metaInfo[i].distance = distance;
   }
-  return distances;
+  return metaInfo;
 };
 
 module.exports = {

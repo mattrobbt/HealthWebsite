@@ -29,10 +29,17 @@ const calculateDistance = (location1, location2) => {
 
 const sortLocations = () => {};
 
-const sortDistances = distances => {
-  return distances.sort((a, b) => {
+const sortDistances = (distances, ascending) => {
+  // move out of here?
+  const ascendingSort = (a, b) => {
     return a - b;
-  });
+  };
+
+  const descendingSort = (a, b) => {
+    return b - a;
+  };
+
+  return distances.sort(ascending ? ascendingSort : descendingSort);
 };
 
 const calculateDistances = (userLocation, locations) => {

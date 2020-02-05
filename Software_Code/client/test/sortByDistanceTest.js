@@ -53,6 +53,13 @@ describe('sortByDistance', () => {
         distances = calculateDistances(userLocation, locations);
         assert.equal(distances.length, locations.length);
       });
+      // TODO: add reverse to be able to sort both ways to reverse
+      it('should be sorted in ascending order', () => {
+        distances = calculateDistances(userLocation, locations);
+        for (let i = 0; i < distances.length - 1; i++) {
+          assert.isAtMost(distances[i], distances[i + 1]);
+        }
+      });
     });
   });
 });

@@ -74,7 +74,7 @@
             <button type="submit" class="btn btn-primary btn-block">Submit</button>
           </div>
         </form>
-       
+       <%@ page import="htmlgeneration.TreatmentCardGenerator"%>
        <%
            
            Cookie cookie=null;
@@ -90,15 +90,27 @@
             }
            SortingByPrice item=new SortingByPrice();
            List<Treatment> result=new ArrayList<Treatment>();
-           if(request.getParameter("price")=="pricelowtohigh"){
+           out.println(request.getParameter("price"));
+           out.println(request.getParameter("pricerange"));
+           if(request.getParameter("price").equals("pricelowtohigh")){
+               out.print("enter1");
                int maxprice=Integer.parseInt(request.getParameter("pricerange"));
                result=item.sortingByPriceLowtoHigh(cookie.getValue(), maxprice);
            }
-           else if(request.getParameter("price")=="pricehightolow"){
+           else if(request.getParameter("price").equals("pricehightolow")){
+               out.print("enter1");
                int maxprice=Integer.parseInt(request.getParameter("pricerange"));
                result=item.sortingByPriceHightoLow(cookie.getValue(), maxprice);
 
            }
+           int index=1;
+           for(Treatment obj:result){
+                TreatmentCardGenerator test=new TreatmentCardGenerator(obj);
+                String html=test.generateCard(index);
+                out.print(html);
+                index++;
+                if(index==5)break;
+            }
            %>
  <%   
   

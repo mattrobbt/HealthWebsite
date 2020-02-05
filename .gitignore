@@ -7,3 +7,13 @@ node_modules
 /Software_Code/client/nbproject/private/
 /Software_Code/jsp/build/
 /Software_Code/jsp/nbproject/private/
+
+# jsp
+**/nbproject/private/
+**/nbproject/Makefile-*.mk
+**/nbproject/Package-*.bash
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/

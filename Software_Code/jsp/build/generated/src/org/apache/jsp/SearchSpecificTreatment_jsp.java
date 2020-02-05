@@ -52,29 +52,29 @@ public final class SearchSpecificTreatment_jsp extends org.apache.jasper.runtime
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("<!DOCTYPE html>\n");
-      out.write("<html>\n");
-      out.write("    <head>\n");
-      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <title>JSP Page</title>\n");
-      out.write("    </head>\n");
-      out.write("    <body>\n");
-      out.write("        <form action=\"SearchSpecificTreatment.jsp\" method=\"post\">\n");
-      out.write("                Search:<br><input type=\"text\" name=\"Search\" value=\"\">\n");
-      out.write("                \n");
-      out.write("                <input type=\"submit\" value=\"Submit\">\n");
-      out.write("            </form> \n");
-      out.write("        </form>\n");
-      out.write("     \n");
-      out.write("     \n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("<!DOCTYPE html>\r\n");
+      out.write("<html>\r\n");
+      out.write("    <head>\r\n");
+      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
+      out.write("        <title>JSP Page</title>\r\n");
+      out.write("    </head>\r\n");
+      out.write("    <body>\r\n");
+      out.write("        <form action=\"SearchSpecificTreatment.jsp\" method=\"post\">\r\n");
+      out.write("                Search:<br><input type=\"text\" name=\"Search\" value=\"\">\r\n");
+      out.write("                \r\n");
+      out.write("                <input type=\"submit\" value=\"Submit\">\r\n");
+      out.write("            </form> \r\n");
+      out.write("        </form>\r\n");
+      out.write("     \r\n");
+      out.write("     \r\n");
       out.write("        ");
 
             SearchSpecificTreatment item=new SearchSpecificTreatment();
@@ -100,8 +100,8 @@ public final class SearchSpecificTreatment_jsp extends org.apache.jasper.runtime
                 if(index==5)break;
             }
             
-      out.write('\n');
-      out.write(' ');
+      out.write("\r\n");
+      out.write(" ");
    
   
 String name=request.getParameter("uname");  
@@ -110,9 +110,9 @@ out.print("Welcome "+name);
 pageContext.setAttribute("user",name,PageContext.SESSION_SCOPE);  
   
 
-      out.write(" \n");
-      out.write("   </body>\n");
-      out.write("</html>\n");
+      out.write(" \r\n");
+      out.write("   </body>\r\n");
+      out.write("</html>\r\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;

@@ -12,7 +12,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Healthcare thing</title>
+    <title>Healthify</title>
     <link rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
@@ -293,7 +293,7 @@ pageContext.setAttribute("user",name,PageContext.SESSION_SCOPE);
   </div>
     <!-- Review Modal End -->
 
-    <!-- The accessibiltiy Modal panel -->
+    <!-- The accessibility Modal panel -->
     <div class="modal fade" id="mypanel">
       <div class="modal-dialog-fluid ">
         <div class="modal-content" id="modalpanel">
@@ -314,7 +314,7 @@ pageContext.setAttribute("user",name,PageContext.SESSION_SCOPE);
         </div>
       </div>
     </div>
-<!-- Accessibiltiy Modal End -->
+<!-- Accessibility Modal End -->
 
   </body>
 <!-- Footer -->

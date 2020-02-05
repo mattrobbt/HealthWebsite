@@ -1,11 +1,9 @@
-jobs:
-  include:
-    - language: node_js
-    node_js:
-      - 10
-    before_install:
-    - cd Software_Code/client
-    install:
-      - npm install
-    script:
-      - npm test
+language: node_js
+node_js:
+  - 'node'
+before_install:
+  - cd Software_Code/client
+install:
+  - npm install
+script:
+  - npm run travis-test

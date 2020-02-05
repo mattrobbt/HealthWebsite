@@ -13,7 +13,6 @@ const onClickShow = parentCard => {
 };
 
 const hideModal = modal => {
-  console.log('calling.hideModal');
   if (modal) {
     modal.classList.add('hide');
     modal.classList.remove('show');

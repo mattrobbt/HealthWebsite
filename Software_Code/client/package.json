@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "travis-test": "mocha --recursive",
     "test": "mocha --watch --recursive || true"
   },
   "author": "charlie",

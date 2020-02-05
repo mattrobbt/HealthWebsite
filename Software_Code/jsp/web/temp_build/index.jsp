@@ -158,15 +158,15 @@
 
                 <div class="slidecontainer">
                   <label>Maximum Price</label>
-                  <input type="range" class="custom-range" name="pricerange" min="1" max="1000000" onchange="updateTextInput(this.value);">
-                  <label>$<input type="text" id="textInput" value="500000" style="border: none;"></label>
+                  <input type="range" class="custom-range" min="1" max="1000000" onchange="updateTextInput(this.value);">
+                  <label>$<input type="text" id="textInput" name="pricerange" value="500000" style="border: none;"></label>
                 </div>
              
               </br>
                 <div class="slidecontainer2">
                   <label></label>Distance</label>
-                  <input type="range" class="custom-range "name="distancerange" min="0" max="2000" onchange="updateTextInput2(this.value);">
-                  <label><input type="text" id="textInput2" value="10" style="border: none;"> .mi</label>
+                  <input type="range" class="custom-range " min="0" max="2000" onchange="updateTextInput2(this.value);">
+                  <label><input type="text" id="textInput2" name="distancerange" value="10" style="border: none;"> .mi</label>
                 </div>
 
                 </div>

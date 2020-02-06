@@ -35,6 +35,7 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="../src/index.js"></script>
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./animate.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
@@ -151,15 +152,15 @@
   </head>
   <body class="" id="bodymain">
 
-    <nav class="navbar navbar-expand-lg navbar-light mb-3 fixed-top" id="navbar"style="background-color: #C91F37">
+    <nav class="navbar navbar-expand-lg  navbar-light mb-3 fixed-top pull-left" id="navbar"style="background-color: #C91F37">
       <a class="navbar-brand" href="#" style="max-width: 10%;"><img src="images/hinder.png" id="logo" style="max-width: 45%;"></a>
-      <h3 class="display-6 text-light ">Healthify</h3>
+      <h3 class="display-6 text-light animated jackInTheBox">Healthify</h3>
   
       <form  action="index.jsp" method="post" class="col-12 col-lg-6 offset-lg-2">
           
-        <div class="p-2 bg-light rounded rounded-pill shadow-lg">
-          <div class="input-group">
-            <input type="search" placeholder="Search" name="Search" aria-describedby="button-addon1" class="form-control border-0 bg-light">
+        <div class="p-2 bg-light rounded rounded-pill shadow-xl">
+          <div class="input-group ">
+            <input type="search" id="searchbox" placeholder="Search" name="Search" aria-describedby="button-addon1" class="form-control border-0 outline-0 bg-light">
             
             <div class="input-group-append">
                 
@@ -174,11 +175,11 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul id="filters" class="navbar-nav fixed-top col-12 col-lg-3">
+      <div class="collapse navbar-collapse  " id="navbarSupportedContent">
+        <ul id="filters" class="navbar-nav animated slideInLeft fixed-top col-12 col-lg-3">
          
             
-                <div class="col-md-5 col-lg-3 col-8 offset-lg-1 offset-md-3 mx-auto" id="sticky-sidebar">
+                <div class="col-md-5 col-lg-3 col-8 offset-lg-1 offset-md-3" id="sticky-sidebar">
                 <form>
                   <!-- Side card used to take input of location-->
                   <div class="card shadow-lg " style="width: 18rem;">

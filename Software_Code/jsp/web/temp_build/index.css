@@ -21,8 +21,10 @@ html, body { padding-top: 4%; padding-left:0%; max-width: 100%;
     
     }
   #filters{
-    top: 14%;
-    background-color: rgba(0,0,0,.9);
+    top: 0%;
+    padding: none;
+    border: none;
+    background-color: black;
     height: 100%;
     width: 100%;
  
@@ -42,7 +44,7 @@ html, body { padding-top: 4%; padding-left:0%; max-width: 100%;
   }
 
     #logo{
-    
+      display:none;
     
     }
   #filters{
@@ -66,9 +68,7 @@ html, body { padding-top: 4%; padding-left:0%; max-width: 100%;
     
   }
 
-    #logo{
-     
-    }
+  
   #filters{
     top: 3.5%;
    

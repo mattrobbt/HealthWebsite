@@ -43,33 +43,6 @@ public class SortingByPrice {
        List<Treatment> result = item.dbQuery(query);
        return result;
     }
-    
-    public List<Treatment> sortingByPriceHightoLowUsingName(String newProcedureName) {
-       
-       String query= "call 19agileteam16db.sortingByPriceHightoLowUsingID('"+newProcedureName+"');"; 
-       List<Treatment> result = item.dbQuery(query);
-       return result;
-    }
-    
-    public List<Treatment> sortingByPriceLowtoHighUsingName(String newProcedureName) {
-       
-       String query="call 19agileteam16db.sortingByPriceLowtoHighUsingID('"+newProcedureName+"')";  
-       System.out.print(query);
-       List<Treatment> result = item.dbQuery(query);
-       return result;
-    }public static void main(String args[]){
-        SortingByPrice item=new SortingByPrice();
-        List<Treatment> result=item.sortingByPriceHightoLow("375",10000);
-        List<Treatment> result1=item.sortingByPriceLowtoHigh("375",10000);
-        List<Treatment> result2=item.sortingByPriceHightoLowUsingName("HEART");
-        List<Treatment> result3=item.sortingByPriceLowtoHighUsingName("HEART");
-        for(Treatment obj:result){
-             System.out.print("<td>"+obj.getProceduresID()+"</td>");
-           System.out.print("<td>"+obj.getProviderName()+"</td>");
-            System.out.print("<td>"+obj.getProcedureName()+"</td>");
-            System.out.print("<td>"+obj.getPrice()+"</td>");
-            System.out.println("<td>"+obj.getAddress()+"</td><tr>");
-        }
-    }
+ 
 }
  

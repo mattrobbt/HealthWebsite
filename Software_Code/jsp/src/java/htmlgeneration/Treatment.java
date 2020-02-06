@@ -16,7 +16,6 @@ public class Treatment{
     private String price;
     private String address;
     public String ProviderID;
-    public String SteetAddress;
     public String City;
     public String State;
     public String ZipCode;
@@ -31,12 +30,7 @@ public class Treatment{
     public void setProviderID(String newProviderID){
         this.ProviderID=newProviderID; 
     } 
-    public String getSteetAddress(){
-        return SteetAddress;
-    }
-    public void setSteetAddress(String newSteetAddress){
-        this.SteetAddress=newSteetAddress;
-    } 
+     
     public String getCity(){
         return City;
     }

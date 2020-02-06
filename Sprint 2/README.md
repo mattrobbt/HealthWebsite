@@ -1,8 +1,5 @@
 # Sprint 1
 
-All information about your first sprint should be put into this folder. Additionally, the information below should be updated to give a short summary of your daily scrum meetings.
-
----
 
 ## Monday 03/02/2020 - Scrum Meeting summary
 The Scrum Master for this meeting was Rauf
@@ -14,13 +11,13 @@ Charlie Hewitt, Rauf Tarar Sultana, Daniel Scheitler, Mengqi Jiang, Matt Robb
 ### Apologies:
 
 ### Summary of Conversation:
-Charlie:On Friday worked on the prepartion on client meeting and today he will be on planing on how we will be using github from now on and group meeting to plan this sprint 
+Charlie: On Friday worked on the preparation on a client meeting and today he will be on planing on how we will be using GitHub from now on and group meeting to plan this sprint 
 
-Rauf: On Friday worked on the prepartion on client meeting and sprint retrospective after the client metting. Today will be working on all the documentation to make it upto.(Product backlog, sprint back log).
+Rauf: On Friday worked on the preparation of client meetings and sprint retrospective after the client meeting. Today will be working on all the documentation to make it up to. (Product backlog, sprint backlog).
 
-Daniel:On Friday worked on the prepartion on client meeting and print retrospective. Today he will be working on things mentioned on the feedback from Mike on sprint 1.
+Daniel: On Friday worked on the preparation on a client meeting and print retrospective. Today he will be working on things mentioned on the feedback from Mike on sprint 1.
 
-Mengqi: On Friday she worked on the prepartion on client meeting and today will be working on SQL queries.
+Mengqi: On Friday she worked on the preparation on a client meeting and today will be working on SQL queries.
 
 Matt: On Friday he worked on some UI design changes and he will be updating the UI design as clients asked.
 
@@ -37,13 +34,13 @@ Charlie Hewitt, Rauf Tarar Sultana, Daniel Scheitler, Mengqi Jiang, Matt Robb
 ### Apologies:
 
 ### Summary of Conversation:
-Charlie: Yesterday he looked at the feedback and wrote a document on github flow and he will be working on distance logic.
+Charlie: Yesterday he looked at the feedback and wrote a document on GitHub flow and he will be working on distance logic.
 
-Rauf: Yesterday looked on the feedback from sprint 1 and  worked on the documentation to make it all upto date(Product backlog, sprint back log). Today I will be working on setting up travis for TDD.
+Rauf: Yesterday looked at the feedback from sprint 1 and worked on the documentation to make it all up to date(Product backlog, sprint backlog). Today I will be working on setting up Travis for TDD.
 
-Daniel:Yesterday he worked on things mentioned on the feedback from Mike on sprint 1 and planed the sprint 2 and today he will be working on retrospective.
+Daniel: Yesterday he worked on things mentioned on the feedback from Mike on sprint 1 and planed the sprint 2 and today he will be working on retrospective.
 
-Mengqi:Yesterday she worked on feedback and planed sprint 2 and today she will be working on connecting search bar and results cards to backend.
+Mengqi: Yesterday she worked on feedback and planed sprint 2 and today she will be working on connecting search bar and results in cards to the backend.
 
 Matt: Yesterday he worked on accessibility to get the website display properly on mobile and he will be working on implementing reviews functionality.
 
@@ -59,15 +56,35 @@ Charlie Hewitt, Rauf Tarar Sultana, Daniel Scheitler, Mengqi Jiang, Matt Robb
 ### Apologies:
 
 ### Summary of Conversation:
-Charlie: Yesterday he worked on distance logic in javascript this will help with sort by distance function and today he will be working on dispalying pins with the actual data from database.
+Charlie: Yesterday he worked on distance logic in javascript this will help with sort by distance function and today he will be working on displaying pins with the actual data from the database.
 
-Rauf: Yesterday after finishing of the agile summary I worked on setting up the travis for automated TDD I had some issues but Charlie was able to help and now some tests are running every time we push code and all of them are passing so far and ater I fixed some issues on github and today I will be working on getting the JUnit testing working with travis and convert locations into coordinates and clean up the github.
+Rauf: Yesterday after finishing of the agile summary I worked on setting up the Travis for automated TDD I had some issues but Charlie was able to help and now some tests are running every time we push code and all of them are passing so far and after I fixed some issues on GitHub and today I will be working on getting the JUnit testing working with Travis and convert locations into coordinates and clean up the GitHub.
 
-Daniel:Yesterday he finished the retrospective and other documentation for the submission and today he will be pair programing with Matt to conect the backend to frontend. 
+Daniel: Yesterday he finished the retrospective and other documentation for the submission and today he will be pair-programming with Matt to connect the backend to frontend. 
 
-Mengqi:Yesterday she worked getting the results from the search and the actual search function and today she will be working on "sort by" functions.
+Mengqi: Yesterday she worked getting the results from the search and the actual search function and today she will be working on "sort by" functions.
 
-Matt: Yesterday he worked on getting the search results to display in the cards on the website and the search aswell and today he will be working on the sort functions and display results on the different pages.
+Matt: Yesterday he worked on getting the search results to display in the cards on the website and the search as well and today he will be working on the sort functions and display results on the different pages.
 
 ---------------------------------------------------------------------------------------------------------------------------------
 
+## Thursday 06/02/2020 - Scrum Meeting summary
+The Scrum Master for this meeting was Rauf
+### Members Present:
+Charlie Hewitt, Rauf Tarar Sultana, Daniel Scheitler, Mengqi Jiang
+
+### Members Not Present:
+Matt Robb
+
+### Apologies:
+
+### Summary of Conversation:
+Charlie: Yesterday he worked on distance logic which works now and today he will be working with Mengqi to implement the distance feature to the front end.
+
+Rauf: Yesterday I converted all the locations into coordinates and populated them on the database and deployed the website on silva server and sorted out the GitHub and today I will be finishing some documentation and prepare for tomorrow's client meeting.
+
+Daniel: Yesterday he finished some documentation and pair programmed with Matt and website testing. Today he will be working on documentation for submissions. 
+
+Mengqi: Yesterday she finished the sorting by price function and connected it to the front end and wrote some unit tests and today she will be working with Charlie to finish the  "sort by distance" filter and later she will be working on reviews system.
+
+---------------------------------------------------------------------------------------------------------------------------------

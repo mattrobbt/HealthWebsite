@@ -39,6 +39,11 @@
     <link rel="stylesheet" href="/resources/demos/style.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+        <script src="../client/src/maps/geolocation.js"></script>
+        <script src="../client/src/maps/maps.js"></script>
+        <script src="../client/src/distances.js"></script>
+
     <script>
    function updateTextInput(val) {
           document.getElementById('textInput').value=val; 
@@ -63,6 +68,22 @@
    $('.modal-backdrop').show();
  }
   </script>
+  
+    
+      <style>
+      /* Always set the map height explicitly to define the size of the div
+      * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
 
   </head>
   <body>
@@ -205,16 +226,25 @@
                 result=item.runDbQueryBySearchProcedure(request.getParameter("Search"));
                 
                 //out.println("=====================enter Searching=====================");
-                
+//                String[] addToMetaInfos = new String[result.size()];
                 //out.println("no search input");
                 int index=1;
                 for(Treatment obj:result){
                     TreatmentCardGenerator test=new TreatmentCardGenerator(obj);
-                    String html=test.generateCard(index);
+                    String html=test.generateCard();
                     out.print(html);
+//                    addToMetaInfos[index] = "metaInfo = addToMetaInfo(metaInfo,"+ obj.ProviderID+"," + "\"" + obj.getProviderName() + "\"," + obj.getPrice() + "," + obj.provider_lat+","+obj.provider_lng+");\n";
                     index++;
                     if(index==5);
                 }
+                
+//                out.print("\n<script>");
+//                out.print("let metaInfo = [];");
+//                for (int i = 0; i<addToMetaInfos.length; i++){
+//                    out.print(addToMetaInfos[i]);
+//                }
+//                out.print("</script>");
+                
                 
             }
             
@@ -227,6 +257,8 @@ String name=request.getParameter("uname");
 pageContext.setAttribute("user",name,PageContext.SESSION_SCOPE);  
   
 %> 
+
+
        <%@ page import="htmlgeneration.TreatmentCardGenerator"%>
         <%
            Cookie cookie=null;
@@ -277,7 +309,7 @@ pageContext.setAttribute("user",name,PageContext.SESSION_SCOPE);
            for(Treatment obj_SF:result_SF){
                //out.print("generate card");
                 TreatmentCardGenerator test_SF=new TreatmentCardGenerator(obj_SF);
-                String html_SF=test_SF.generateCard(index_SF);
+                String html_SF=test_SF.generateCard();
                 out.print(html_SF);
                 index_SF++;
                 if(index_SF==5);
@@ -316,7 +348,7 @@ pageContext.setAttribute("user",name1,PageContext.SESSION_SCOPE);
         
         <!-- Modal body -->
         <div class="modal-body">
-          <embed class="card-fluid" id="map" src="./maps.html" width=200 height=200 />
+            <div class="card-fluid" id="map" width=200 height=200> </div>
         </div> 
       </div>
     </div>
@@ -389,7 +421,41 @@ pageContext.setAttribute("user",name1,PageContext.SESSION_SCOPE);
       </div>
     </div>
 <!-- Accessibility Modal End -->
+<script>
+    let metaInfo = [];
+    
+    metaInfo = addToMetaInfo(metaInfo,11006,"Hospital",4000,48,-100);
+    
+    console.log(metaInfo);
+                // initialising map
+let map = createMap();
 
+// getting location data, defaults to central USA if geolocation is rejected
+let userLocation;
+let tempUserLocation = geoLocation(map);
+
+if (tempUserLocation !== undefined) {
+  userLocation = tempUserLocation;
+} else {
+  userLocation = {
+    lat: 38,
+    lng: -98
+  };
+}
+
+// calculate & add distances to metaInfo
+metaInfo = updateDistances(userLocation, metaInfo);
+updateCards(metaInfo);
+
+// display markers on map
+addMarkersFromMetaInfo(map, metaInfo);
+addUserMarker(map, userLocation, 'You are here');
+
+// optional circle for filter
+let distanceRange = 1000000;
+const circle = addCircle(map, distanceRange, userLocation);
+
+</script>
   </body>
 <!-- Footer -->
 <footer class="page-footer font-small indigo">

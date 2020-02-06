@@ -111,12 +111,13 @@
            int index=1;
            for(Treatment obj:result){
                 TreatmentCardGenerator test=new TreatmentCardGenerator(obj);
-                String html=test.generateCard(index);
+                String html=test.generateCard();
                 out.print(html);
                 index++;
                 if(index==5)break;
             }
            %>
+           
 <%   
   
 String name=request.getParameter("uname");  

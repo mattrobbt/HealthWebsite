@@ -69,7 +69,7 @@
             
             %>
                 // initialising map
-const map = createMap();
+let map = createMap();
 
 // getting location data, defaults to central USA if geolocation is rejected
 let userLocation;

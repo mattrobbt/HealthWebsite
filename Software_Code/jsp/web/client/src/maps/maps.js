@@ -108,12 +108,16 @@ const updateCards = metaInfo => {
         const metaInfoItem = metaInfo[i];
         const id = metaInfo[i].id;
         
+        console.log(`attempting to add distance to card with id = ${metaInfoItem.id}`)
+        
+        // get the card
         if (id){
             const card = document.getElementById(id);
             //console.log(card);
             
+            // update distance element in card
             if (card){
-                const distance = metaInfoItem.distance ? metaInfoItem.distance : '...';
+                const distance = metaInfoItem.distance ? metaInfoItem.distance : '$...';
                 
                 if (card.getElementsByClassName('distance').length === 1){
                     card.getElementsByClassName('distance')[0].innerHTML = distance;

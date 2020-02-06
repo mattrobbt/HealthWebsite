@@ -26,6 +26,7 @@ public class TreatmentCardGenerator {
         String procedureName = treatment.getProcedureName();
         String price = treatment.getPrice();
         String address = treatment.getAddress();
+
         String city = treatment.getCity();
         String zipcode = treatment.getZipCode();
         String state = treatment.getState();
@@ -42,7 +43,7 @@ public class TreatmentCardGenerator {
         html += "   <span class=\"fa fa-star\"></span>\n";
         html += "    <span class=\"fa fa-star\"></span>\n";
         html += "    <div class=\"showing-hidden\">\n";
-        html += "      <button class=\"btn btn-primary btn-block\" onclick=\"onClickShow(document.getElementById('card" + index + "'))\">Show more</button>\n";
+        html += "      <button class=\"btn btn-primary animated pulse btn-block\" onclick=\"onClickShow(document.getElementById('card" + index + "'))\">Show more</button>\n";
         html += "   </div>\n";
         html += "   <div class=\"hide\">\n";
         html += "\n";

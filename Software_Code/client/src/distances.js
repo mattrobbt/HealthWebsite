@@ -27,7 +27,30 @@ const calculateDistance = (location1, location2) => {
   return Math.round(d / 1000);
 };
 
+const sortByDistance = (metaInfo, ascending) => {
+  const ascendingSort = (a, b) => {
+    return a.distance - b.distance;
+  };
+
+  const descendingSort = (a, b) => {
+    return b.distance - a.distance;
+  };
+
+  return metaInfo.sort(ascending ? ascendingSort : descendingSort);
+};
+
+/** currently still in KM not miles! */
+const calculateDistances = (userLocation, metaInfo) => {
+  for (let i = 0; i < metaInfo.length; i++) {
+    let distance = calculateDistance(userLocation, metaInfo[i].location);
+    metaInfo[i].distance = distance;
+  }
+  return metaInfo;
+};
+
 module.exports = {
   degreesToRadians: degreesToRadians,
-  calculateDistance: calculateDistance
+  calculateDistance: calculateDistance,
+  sortByDistance: sortByDistance,
+  calculateDistances: calculateDistances
 };

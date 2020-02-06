@@ -1,3 +1,7 @@
+/**
+ * Internal functionality -- no tests for this logic as most of it is DOM based or relies on the Google Maps API
+ */
+
 const createMap = () => {
   return new google.maps.Map(document.getElementById('map'), {
     zoom: 5,
@@ -16,7 +20,8 @@ const createMap = () => {
 const addMarker = (map, position, content) => {
   const marker = new google.maps.Marker({
     map: map,
-    position: position
+    position: position,
+    animation: google.maps.Animation.DROP
   });
 
   marker.addListener('click', () => {
@@ -27,36 +32,93 @@ const addMarker = (map, position, content) => {
   });
 };
 
-/** todo: add address */
-const createMarkerContent = (hospital, procedure, price) => {
-  return `<div><h3>${hospital}</h3><h4>${procedure}</h4><p>${price}</p></div>`;
+// TODO: update metainfo to store & use name, price //address?
+const createMarkerContent = metaInfoItem => {
+  return `<div><h3>${metaInfoItem.id}</h3><h4>${metaInfoItem.distance} miles (${metaInfoItem.location.lat}, ${metaInfoItem.location.lng})</h4></div>`;
 };
-/** calling functions for testing */
+
+const addMarkersFromMetaInfo = (map, metaInfo) => {
+  for (let i = 0; i < metaInfo.length; i++) {
+    addMarker(map, metaInfo[i].location, createMarkerContent(metaInfo[i]));
+  }
+};
+
+// radius in metres
+const addCircle = (map, radius, location) => {
+  const circle = new google.maps.Circle({
+    strokeColor: '#16aaf0',
+    strokeOpacity: 0.3,
+    strokeWeight: 2,
+    fillColor: '#16aaf0',
+    map: map,
+    center: location,
+    radius: radius
+  });
+
+  return circle;
+};
+
+const removeCircle = circle => {
+  circle.setMap(null);
+  circle = null;
+};
+
+const updateDistances = (userLocation, metaInfo) => {
+  return calculateDistances(userLocation, metaInfo);
+};
+
+/** To be used from java in generated code to populate metaInfo */
+const addToMetaInfo = (metaInfo, id, lat, lng) => {
+  const newMetaInfoItem = {
+    id: id,
+    location: {
+      lat: lat,
+      lng: lng
+    },
+    distance: undefined
+  };
+  metaInfo.push(newMetaInfoItem);
+
+  return metaInfo;
+};
+
+/**
+ *  example code to be called externally (Java)
+ */
+
+// initialising & populating metaInfo
+let metaInfo = [];
+metaInfo = addToMetaInfo(metaInfo, 1, 45, -120);
+metaInfo = addToMetaInfo(metaInfo, 2, 34, -90);
+metaInfo = addToMetaInfo(metaInfo, 3, 40, -80);
+metaInfo = addToMetaInfo(metaInfo, 4, 27, -82);
+
+// initialising map
 const map = createMap();
-geoLocation(map);
 
-const markerContent1 = createMarkerContent(
-  'University of Alabama Hospital',
-  'Heart surgery',
-  '$273,737'
-);
-const markerContent2 = createMarkerContent(
-  'Mayo Clinic Hospital',
-  'Heart surgery',
-  '$226,998'
-);
-const markerContent3 = createMarkerContent(
-  'Baptist Health Medical Center Little Rock',
-  'Heart surgery',
-  '$162,530'
-);
-const markerContent4 = createMarkerContent(
-  'UC San Diego Health Hillcrest',
-  'Heart surgery',
-  '$319,044'
-);
+// getting location data, defaults to central USA if geolocation is rejected
+let userLocation;
+let tempUserLocation = geoLocation(map);
 
-addMarker(map, { lat: 33.5065, lng: -86.803 }, markerContent1);
-addMarker(map, { lat: 33.6591, lng: -111.9565 }, markerContent2);
-addMarker(map, { lat: 34.7443, lng: -92.3808 }, markerContent3);
-addMarker(map, { lat: 32.7551, lng: -117.1659 }, markerContent4);
+if (tempUserLocation !== undefined) {
+  userLocation = tempUserLocation;
+} else {
+  userLocation = {
+    lat: 38,
+    lng: -98
+  };
+}
+
+// calculate & add distances to metaInfo
+metaInfo = updateDistances(userLocation, metaInfo);
+
+// display markers on map
+addMarker(map, userLocation, 'You are here');
+addMarkersFromMetaInfo(map, metaInfo);
+
+// optional circle for filter
+let distanceRange = 1000000;
+const circle = addCircle(map, distanceRange, userLocation);
+
+// remove circle
+//removeCircle(circle);

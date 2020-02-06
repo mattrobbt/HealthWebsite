@@ -22,6 +22,8 @@ public class Treatment{
     public String ZipCode;
     public String HRR;
     public String TotalDischarge;
+    public String provider_lat;
+    public String provider_lng;
     
     public String getProviderID(){
         return ProviderID;
@@ -115,6 +117,20 @@ public class Treatment{
     
     public void setTotalDischarge(String newTotalDischarge){
         this.TotalDischarge=newTotalDischarge;
+    }
+    
+    public String getProviderLat() {
+        return provider_lat;
+    }
+    public void setProviderLat(String newProviderLat){
+        this.provider_lat=newProviderLat;
+    }
+    
+    public String getProviderLng() {
+        return provider_lng;
+    }
+    public void setProviderLng(String newProviderLng){
+        this.provider_lng=newProviderLng;
     }
  
 }

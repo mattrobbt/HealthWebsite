@@ -68,6 +68,8 @@ public class DbConTemplate {
                 String zipCode=rs.getString("ZipCode");
                 String TotalDischarge=rs.getString("TotalDischarges");
                 String hrr=rs.getString("HRR");
+                String lat=rs.getString("lat");
+                String lng=rs.getString("lng");
                 Treatment.setProviderID(ProviderID);
                 Treatment.setCity(city);
                 Treatment.setState(state);
@@ -78,6 +80,8 @@ public class DbConTemplate {
                 Treatment.setProcedureName(ProcedureName);
                 Treatment.setProviderName(ProviderName);
                 Treatment.setHRR(hrr);
+                Treatment.setProviderLat(lat);
+                Treatment.setProviderLng(lng);
                 result.add(Treatment);
                 
             }

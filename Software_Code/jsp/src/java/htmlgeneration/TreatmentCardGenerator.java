@@ -26,8 +26,11 @@ public class TreatmentCardGenerator {
         String procedureName = treatment.getProcedureName();
         String price = treatment.getPrice();
         String address = treatment.getAddress();
-        
-        String html = "<div class=\"card col-lg-10 col shadow-lg animated fadeInDown\">\n";
+
+        String city = treatment.getCity();
+        String zipcode = treatment.getZipCode();
+        String state = treatment.getState();
+        String html = "<div class=\"card col-lg-10 col shadow-lg\">\n";
         html += "<div class=\"card-body\" id=\"card" + index + "\">\n";
         html += "     <a class=\"col-lg-10 col offset-11\" data-toggle=\"modal\" data-target=\"#myModal\"><img  id=\"map\" src=\"images/map.png\" style=\"max-width: 6%;\" ></a>\n";
         html += "     <h6 class=\"card-title offset-10\">6.0 mi</h6>\n";
@@ -44,8 +47,8 @@ public class TreatmentCardGenerator {
         html += "   </div>\n";
         html += "   <div class=\"hide\">\n";
         html += "\n";
-        html += "    " + address + "\n";
-        html += "    <button class=\"btn btn-outline-primary animated pulse btn-block\" onclick=\"onClickShow(document.getElementById('card" + index + "'))\">Show less</button>\n";
+        html += "    " + address + "\n<br>" + "    " + zipcode + "    " + city + "\n<br>" + state + "\n<br><br>\n" ;
+        html += "    <button class=\"btn btn-outline-primary btn-block\" onclick=\"onClickShow(document.getElementById('card" + index + "'))\">Show less</button>\n";
         html += "  </div>\n";
         html += " </div>\n";
         html += "</div>";

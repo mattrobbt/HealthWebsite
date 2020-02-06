@@ -1,4 +1,6 @@
-
+.hide {
+  display: none;
+}
 
 /* .showing-hidden {
 } */
@@ -40,7 +42,7 @@ html, body { padding-top: 4%; padding-left:0%; max-width: 100%;
   }
 
     #logo{
-      display:none;
+    
     
     }
   #filters{
@@ -65,8 +67,7 @@ html, body { padding-top: 4%; padding-left:0%; max-width: 100%;
   }
 
     #logo{
-      display:none;
-    
+     
     }
   #filters{
     top: 3.5%;

@@ -21,14 +21,14 @@ public class TreatmentCardGenerator {
     /** 
      * Todo: split up into smaller sections & use actual data classes
      */
-    public String generateCard(int index) {
+    public String generateCard() {
         String providerName = treatment.getProviderName();
         String procedureName = treatment.getProcedureName();
         String price = treatment.getPrice();
         String address = treatment.getAddress();
         
         String html = "<div class=\"card col-lg-10 col\">\n";
-        html += "<div class=\"card-body\" id=\"card" + index + "\">\n";
+        html += "<div class=\"card-body\" id=\"" + treatment.getProviderID() + "\"\n";
         html += "     <a class=\"col-lg-10 col offset-11\" data-toggle=\"modal\" data-target=\"#myModal\"><img  id=\"map\" src=\"images/map.png\" style=\"max-width: 6%;\" ></a>\n";
         html += "     <h6 class=\"card-title offset-10\">6.0 mi</h6>\n";
         html += "    <h4 class=\"card-title\">" + providerName + "</h4>\n";
@@ -40,12 +40,12 @@ public class TreatmentCardGenerator {
         html += "   <span class=\"fa fa-star\"></span>\n";
         html += "    <span class=\"fa fa-star\"></span>\n";
         html += "    <div class=\"showing-hidden\">\n";
-        html += "      <button class=\"btn btn-primary btn-block\" onclick=\"onClickShow(document.getElementById('card" + index + "'))\">Show more</button>\n";
+        html += "      <button class=\"btn btn-primary btn-block\" onclick=\"onClickShow(document.getElementById('card" + treatment.getProviderID() + "'))\">Show more</button>\n";
         html += "   </div>\n";
         html += "   <div class=\"hide\">\n";
         html += "\n";
         html += "    " + address + "\n";
-        html += "    <button class=\"btn btn-outline-primary btn-block\" onclick=\"onClickShow(document.getElementById('card" + index + "'))\">Show less</button>\n";
+        html += "    <button class=\"btn btn-outline-primary btn-block\" onclick=\"onClickShow(document.getElementById('card" + treatment.getProviderID() + "'))\">Show less</button>\n";
         html += "  </div>\n";
         html += " </div>\n";
         html += "</div>";

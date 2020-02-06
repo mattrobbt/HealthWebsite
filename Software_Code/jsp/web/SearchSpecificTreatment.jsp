@@ -42,7 +42,7 @@
                 int index=1;
                 for(Treatment obj:result){
                     TreatmentCardGenerator test=new TreatmentCardGenerator(obj);
-                    String html=test.generateCard(index);
+                    String html=test.generateCard();
                     out.print(html);
                     index++;
                     if(index==5)break;
@@ -165,7 +165,7 @@ pageContext.setAttribute("user",name,PageContext.SESSION_SCOPE);
            int index_SF=1;
            for(Treatment obj:result_SF){
                 TreatmentCardGenerator test=new TreatmentCardGenerator(obj);
-                String html=test.generateCard(index_SF);
+                String html=test.generateCard();
                 out.print(html);
                 index_SF++;
                 if(index_SF==5)break;

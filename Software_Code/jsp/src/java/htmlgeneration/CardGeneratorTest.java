@@ -20,7 +20,7 @@ public class CardGeneratorTest {
         
         
         for (int i = 0; i < 5; i++) {
-           generator.generateCard(i);
+           generator.generateCard();
            
 
         }

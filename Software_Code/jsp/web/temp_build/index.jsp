@@ -50,24 +50,108 @@
     $('#myModal').hide();
     $('.modal-backdrop').hide();
   }
-  function showModal(){
-   $('#myModal').show();
-   $('.modal-backdrop').show();
- }
+  
  function destroyModal_review(){
     $('#review').hide();
     $('.modal-backdrop').hide();
   }
-  function showModal_review(){
-   $('#review').show();
-   $('.modal-backdrop').show();
- }
+ 
+  function destroyModal_access(){
+    $('#mypanel').hide();
+    $('.modal-backdrop').hide();
+  }
+  function contrast(){
+    var element = document.getElementById("navbar");
+    element.classList.add("bg-primary");
+    var element = document.getElementById("bodymain");
+    element.classList.add("text-primary");
+     
+    }
+      function darkmode(){
+    var element = document.getElementById("navbar");
+    element.classList.add("bg-dark");
+    var element = document.getElementById("bodymain");
+    element.classList.add("bg-dark");
+    var element = document.getElementById("bodymain");
+    element.classList.add("text-light");
+    var element = document.getElementById("button-addon2");
+    element.classList.add("btn-outline-light");
+    element.classList.remove("btn-outline-dark");
+    var element = document.getElementById("textInput");
+    element.classList.add("bg-dark");
+    element.classList.add("text-light");
+    var element = document.getElementById("textInput2");
+    element.classList.add("bg-dark");
+    element.classList.add("text-light");
+    var cards = document.getElementsByClassName("card")
+    
+    for (let i = 0; i< cards.length; i++) {
+        console.log(cards[i]);
+        cards[i].classList.add("bg-dark");
+        cards[i].classList.add("text-light")
+        
+    }
+    var modal = document.getElementById("modalaccess")
+    modal.classList.add("bg-dark");
+    var modal = document.getElementById("modalmap")
+    modal.classList.add("bg-dark");
+   
+   // element.classList.add("");
+     
+    }
+      function standard(){
+    var element = document.getElementById("navbar");
+    element.classList.remove("bg-dark");
+    var element = document.getElementById("bodymain");
+    element.classList.remove("bg-dark");
+    var element = document.getElementById("bodymain");
+    element.classList.remove("text-light");
+    var element = document.getElementById("button-addon2");
+    element.classList.remove("btn-outline-light");
+    element.classList.add("btn-outline-dark");
+    var element = document.getElementById("textInput");
+    element.classList.remove("bg-dark");
+    element.classList.remove("text-light");
+    var element = document.getElementById("textInput2");
+    element.classList.remove("bg-dark");
+    element.classList.remove("text-light");
+    var cards = document.getElementsByClassName("card")
+    
+    for (let i = 0; i< cards.length; i++) {
+        console.log(cards[i]);
+        cards[i].classList.remove("bg-dark");
+        cards[i].classList.remove("text-light")
+    }
+    var modal = document.getElementById("modalaccess")
+    modal.classList.remove("bg-dark");
+    var modal = document.getElementById("modalmap")
+    modal.classList.remove("bg-dark");
+    var element = document.getElementById("navbar");
+    element.classList.remove("bg-primary");
+    var element = document.getElementById("bodymain");
+    element.classList.remove("text-primary");
+     
+    }
+    
+     function text_inc(){
+      txt = document.getElementById('bodymain');
+    style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+    currentSize = parseFloat(style);
+    txt.style.fontSize = (currentSize + 10) + 'px';
+    }
+     function text_dec(){
+     txt = document.getElementById('bodymain');
+    style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+    currentSize = parseFloat(style);
+    txt.style.fontSize = (currentSize - 10) + 'px';
+    }
+    
   </script>
 
   </head>
-  <body>
+  <body class="" id="bodymain">
 
-    <nav class="navbar navbar-expand-lg navbar-light mb-3 fixed-top" style="background-color: #C91F37">
+    <nav class="navbar navbar-expand-lg navbar-light mb-3 fixed-top" id="navbar"style="background-color: #C91F37">
       <a class="navbar-brand" href="#" style="max-width: 10%;"><img src="images/hinder.png" id="logo" style="max-width: 45%;"></a>
       <h3 class="display-6 text-light ">Healthify</h3>
   
@@ -86,19 +170,18 @@
         </form>
       
            
-         <!-- <a class="btn navbar-brand display-1 offset-2 text-light" href="login.html" >Login </a>
-          <a class="btn navbar-brand display-1 text-light" href="#" >Register</a> -->
+        
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul id="filters" class="navbar-nav fixed-top col-12 col-lg-3">
          
-            <div class="row">
+            
                 <div class="col-sm-5 col-md-5 col-lg-3 col-4 offset-sm-1 offset-lg-1 offset-md-3 " id="sticky-sidebar">
                 <form>
                   <!-- Side card used to take input of location-->
-                  <div class="card" style="width: 18rem;">
+                  <div class="card shadow-lg" style="width: 18rem;">
                     <div class="card-body">
                       <div class="filter-content">
                       <h5 class="card-title">Location</h5>
@@ -116,7 +199,7 @@
                 </form>
                 <form action="index.jsp" method="post">
           <!-- Side card used to take input of location-->
-            <div class="card" style="width: 18rem;">
+            <div class="card shadow-lg" style="width: 18rem;">
               <div class="card-body">
                 <div class="filter-content">
                 <h5 class="card-title">Sort By</h5>
@@ -151,7 +234,7 @@
            </div>
           </br>
             <!-- Side card with range slider to filter maximum price/distance-->
-            <div class="card" style="width: 18rem;">
+            <div class="card shadow-lg" style="width: 18rem;">
               <div class="card-body">
                 <div class="filter-content">
                 <h5 class="card-title">Filters</h5>
@@ -309,7 +392,7 @@ pageContext.setAttribute("user",name1,PageContext.SESSION_SCOPE);
         <div class="modal-header">
           <h4 class="modal-title">Location</h4>
 
-          <button type="button" class="close" onclick="destroyModal('myModal');">
+          <button type="button" class="close" onclick="destroyModal();">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
@@ -330,7 +413,7 @@ pageContext.setAttribute("user",name1,PageContext.SESSION_SCOPE);
         <!-- Modal Header -->
         <div class="modal-header">
             <h4 class="modal-title">Reviews</h4>
-            <button type="button" class="close" onclick="destroyModal_review('myModal');">
+            <button type="button" class="close" onclick="destroyModal_review();">
             <span aria-hidden="true">&times;</span>
         </div>
         <!-- Modal body -->
@@ -368,22 +451,32 @@ pageContext.setAttribute("user",name1,PageContext.SESSION_SCOPE);
     <!-- Review Modal End -->
 
     <!-- The accessibility Modal panel -->
-    <div class="modal fade" id="mypanel">
+    <div class="modal " id="mypanel">
       <div class="modal-dialog-fluid ">
-        <div class="modal-content" id="modalpanel">
+        <div class="modal-content col-12 col-lg-5 col-md-7 mx-auto " id="modalaccess">
           <!-- Modal Header -->
           <div class="modal-header">
             <h4 class="modal-title">Accessibility</h4>
-            <button type="button" class="close" onclick="destroyModal('myModal');">
+            <button type="button" class="close" onclick="destroyModal_access();">
               <span aria-hidden="true">&times;</span>
           </div>
           <!-- Modal body -->
           <div class="modal-body">
-            <h4 class="display-5">
-              Font Size: 
-            </h4>
-            <a type="button" class="btn-outline-dark rounded-pill shadow-lg p-3 offset-7" data-target="#myModalpanel" >&plus;</a>
-            <a type="button" class="btn-outline-dark rounded-pill shadow-lg p-3 " data-target="#myModalpanel" >&minus;</a>
+              <div >
+            <h4>Font Size:</h4> 
+            <a type="button" class="btn-outline-dark rounded-pill shadow-lg p-3 " onclick="text_inc();">&plus;</a>
+            <a type="button" class="btn-outline-dark rounded-pill shadow-lg p-3 " onclick="text_dec();">&minus;</a>
+              </div>
+              <div>
+          <h4> High Contrast:</h4>
+            <a type="button" class="btn-outline-dark rounded-pill shadow-lg p-3 " onclick="contrast();">ON</a> 
+            <a type="button" class="btn-outline-dark rounded-pill shadow-lg p-3" onclick="standard();">OFF</a>   
+              </div>
+              <div>
+          <h4> Dark Mode</h4>
+            <a type="button" class="btn-outline-dark rounded-pill shadow-lg p-3 " onclick="darkmode();">ON</a>  
+            <a type="button" class="btn-outline-dark rounded-pill shadow-lg p-3" onclick="standard();">OFF</a>   
+              </div>
           </div>  
         </div>
       </div>

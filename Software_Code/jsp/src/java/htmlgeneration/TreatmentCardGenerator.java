@@ -27,7 +27,7 @@ public class TreatmentCardGenerator {
         String price = treatment.getPrice();
         String address = treatment.getAddress();
         
-        String html = "<div class=\"card col-lg-10 col\">\n";
+        String html = "<div class=\"card col-lg-10 col shadow-lg\">\n";
         html += "<div class=\"card-body\" id=\"card" + index + "\">\n";
         html += "     <a class=\"col-lg-10 col offset-11\" data-toggle=\"modal\" data-target=\"#myModal\"><img  id=\"map\" src=\"images/map.png\" style=\"max-width: 6%;\" ></a>\n";
         html += "     <h6 class=\"card-title offset-10\">6.0 mi</h6>\n";

@@ -60,13 +60,28 @@
     $('#mypanel').hide();
     $('.modal-backdrop').hide();
   }
-  
+  function contrast(){
+    var element = document.getElementById("navbar");
+    element.classList.add("bg-primary");
+    var element = document.getElementById("bodymain");
+    element.classList.add("text-primary");
+     
+    }
+  function darkmode(){
+    var element = document.getElementById("navbar");
+    element.classList.add("bg-dark");
+    var element = document.getElementById("bodymain");
+    element.classList.add("text-white");
+    var element = document.getElementById("bodymain");
+    element.classList.add("bg-dark");
+     
+    }
   </script>
 
   </head>
-  <body>
+  <body class="" id="bodymain">
 
-    <nav class="navbar navbar-expand-lg navbar-light mb-3 fixed-top" style="background-color: #C91F37">
+    <nav class="navbar navbar-expand-lg navbar-light mb-3 fixed-top" id="navbar"style="background-color: #C91F37">
       <a class="navbar-brand" href="#" style="max-width: 10%;"><img src="images/hinder.png" id="logo" style="max-width: 45%;"></a>
       <h3 class="display-6 text-light ">Healthify</h3>
   
@@ -378,11 +393,20 @@ pageContext.setAttribute("user",name1,PageContext.SESSION_SCOPE);
           </div>
           <!-- Modal body -->
           <div class="modal-body">
-            <h4 class="display-5">
-              Font Size: 
-            </h4>
+            <h4>Font Size: </h4>
             <a type="button" class="btn-outline-dark rounded-pill shadow-lg p-3 offset-7" data-target="#myModalpanel" >&plus;</a>
             <a type="button" class="btn-outline-dark rounded-pill shadow-lg p-3 " data-target="#myModalpanel" >&minus;</a>
+          <h4> High Contrast: </h4>
+            <div class="custom-control custom-switch offset-10 col-3 ">
+            <input type="checkbox" class="custom-control-input" id="customSwitch1" onclick="contrast();">
+            <label class="custom-control-label" for="customSwitch1"></label>           
+            </div>
+          <h4> Dark Mode </h4>
+            <div class="custom-control custom-switch offset-10 col-3 ">
+            <input type="checkbox" class="custom-control-input" id="customSwitch2" onclick="darkmode();">
+            <label class="custom-control-label" for="customSwitch2"></label>
+            </div>
+           
           </div>  
         </div>
       </div>

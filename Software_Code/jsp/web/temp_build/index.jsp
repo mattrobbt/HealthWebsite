@@ -72,6 +72,29 @@
     element.classList.add("bg-dark");
     var element = document.getElementById("bodymain");
     element.classList.add("bg-dark");
+    var element = document.getElementById("bodymain");
+    element.classList.add("text-light");
+    var element = document.getElementById("button-addon2");
+    element.classList.add("btn-outline-light");
+    element.classList.remove("btn-outline-dark");
+    var element = document.getElementById("textInput");
+    element.classList.add("bg-dark");
+    var element = document.getElementById("textInput2");
+    element.classList.add("bg-dark");
+    var cards = document.getElementsByClassName("card")
+    
+    for (let i = 0; i< cards.length; i++) {
+        console.log(cards[i]);
+        cards[i].classList.add("bg-dark");
+        cards[i].classList.add("text-light")
+        
+    }
+    var modal = document.getElementById("modalaccess")
+    modal.classList.add("bg-dark");
+    var modal = document.getElementById("modalmap")
+    modal.classList.add("bg-dark");
+   
+   // element.classList.add("");
      
     }
       function standard(){
@@ -79,12 +102,29 @@
     element.classList.remove("bg-dark");
     var element = document.getElementById("bodymain");
     element.classList.remove("bg-dark");
-    var element = document.getElementById("navbar");
-    element.classList.remove("bg-primary");
     var element = document.getElementById("bodymain");
-    element.classList.remove("text-primary");
-     
+    element.classList.remove("text-light");
+    var element = document.getElementById("button-addon2");
+    element.classList.remove("btn-outline-light");
+    element.classList.add("btn-outline-dark");
+    var element = document.getElementById("textInput");
+    element.classList.remove("bg-dark");
+    var element = document.getElementById("textInput2");
+    element.classList.add("bg-dark");
+    var cards = document.getElementsByClassName("card")
+    
+    for (let i = 0; i< cards.length; i++) {
+        console.log(cards[i]);
+        cards[i].classList.remove("bg-dark");
+        cards[i].classList.remove("text-light")
     }
+    var modal = document.getElementById("modalaccess")
+    modal.classList.remove("bg-dark");
+    var modal = document.getElementById("modalmap")
+    modal.classList.remove("bg-dark");
+   
+    }
+    
      function text_inc(){
       txt = document.getElementById('bodymain');
     style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
@@ -404,9 +444,9 @@ pageContext.setAttribute("user",name1,PageContext.SESSION_SCOPE);
     <!-- Review Modal End -->
 
     <!-- The accessibility Modal panel -->
-    <div class="modal" id="mypanel">
+    <div class="modal " id="mypanel">
       <div class="modal-dialog-fluid ">
-        <div class="modal-content col-10 col-lg-5 col-md-7 mx-auto " id="modalaccess">
+        <div class="modal-content col-12 col-lg-5 col-md-7 mx-auto " id="modalaccess">
           <!-- Modal Header -->
           <div class="modal-header">
             <h4 class="modal-title">Accessibility</h4>
@@ -415,17 +455,21 @@ pageContext.setAttribute("user",name1,PageContext.SESSION_SCOPE);
           </div>
           <!-- Modal body -->
           <div class="modal-body">
-            <h4>Font Size: </h4>
-            <a type="button" class="btn-outline-dark rounded-pill shadow-lg p-3 offset-7" onclick="text_inc();">&plus;</a>
+              <div >
+            <h4>Font Size:</h4> 
+            <a type="button" class="btn-outline-dark rounded-pill shadow-lg p-3 " onclick="text_inc();">&plus;</a>
             <a type="button" class="btn-outline-dark rounded-pill shadow-lg p-3 " onclick="text_dec();">&minus;</a>
-          <h4> High Contrast: </h4>
-            <a type="button" class="btn-outline-dark rounded-pill shadow-lg p-3 offset-7" onclick="contrast();">ON</a> 
+              </div>
+              <div>
+          <h4> High Contrast:</h4>
+            <a type="button" class="btn-outline-dark rounded-pill shadow-lg p-3 " onclick="contrast();">ON</a> 
             <a type="button" class="btn-outline-dark rounded-pill shadow-lg p-3" onclick="standard();">OFF</a>   
-            
-          <h4> Dark Mode </h4>
-            <a type="button" class="btn-outline-dark rounded-pill shadow-lg p-3 offset-7" onclick="darkmode();">ON</a>  
+              </div>
+              <div>
+          <h4> Dark Mode</h4>
+            <a type="button" class="btn-outline-dark rounded-pill shadow-lg p-3 " onclick="darkmode();">ON</a>  
             <a type="button" class="btn-outline-dark rounded-pill shadow-lg p-3" onclick="standard();">OFF</a>   
-          
+              </div>
           </div>  
         </div>
       </div>

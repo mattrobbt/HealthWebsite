@@ -50,18 +50,17 @@
     $('#myModal').hide();
     $('.modal-backdrop').hide();
   }
-  function showModal(){
-   $('#myModal').show();
-   $('.modal-backdrop').show();
- }
+  
  function destroyModal_review(){
     $('#review').hide();
     $('.modal-backdrop').hide();
   }
-  function showModal_review(){
-   $('#review').show();
-   $('.modal-backdrop').show();
- }
+ 
+  function destroyModal_access(){
+    $('#mypanel').hide();
+    $('.modal-backdrop').hide();
+  }
+  
   </script>
 
   </head>
@@ -309,7 +308,7 @@ pageContext.setAttribute("user",name1,PageContext.SESSION_SCOPE);
         <div class="modal-header">
           <h4 class="modal-title">Location</h4>
 
-          <button type="button" class="close" onclick="destroyModal('myModal');">
+          <button type="button" class="close" onclick="destroyModal();">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
@@ -330,7 +329,7 @@ pageContext.setAttribute("user",name1,PageContext.SESSION_SCOPE);
         <!-- Modal Header -->
         <div class="modal-header">
             <h4 class="modal-title">Reviews</h4>
-            <button type="button" class="close" onclick="destroyModal_review('myModal');">
+            <button type="button" class="close" onclick="destroyModal_review();">
             <span aria-hidden="true">&times;</span>
         </div>
         <!-- Modal body -->
@@ -368,13 +367,13 @@ pageContext.setAttribute("user",name1,PageContext.SESSION_SCOPE);
     <!-- Review Modal End -->
 
     <!-- The accessibility Modal panel -->
-    <div class="modal fade" id="mypanel">
+    <div class="modal" id="mypanel">
       <div class="modal-dialog-fluid ">
-        <div class="modal-content" id="modalpanel">
+        <div class="modal-content col-10 col-lg-5 col-md-7 mx-auto " id="modalaccess">
           <!-- Modal Header -->
           <div class="modal-header">
             <h4 class="modal-title">Accessibility</h4>
-            <button type="button" class="close" onclick="destroyModal('myModal');">
+            <button type="button" class="close" onclick="destroyModal_access();">
               <span aria-hidden="true">&times;</span>
           </div>
           <!-- Modal body -->

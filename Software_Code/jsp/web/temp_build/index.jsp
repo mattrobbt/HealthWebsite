@@ -85,6 +85,19 @@
     element.classList.remove("text-primary");
      
     }
+     function text_inc(){
+      txt = document.getElementById('bodymain');
+    style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+    currentSize = parseFloat(style);
+    txt.style.fontSize = (currentSize + 10) + 'px';
+    }
+     function text_dec(){
+     txt = document.getElementById('bodymain');
+    style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+    currentSize = parseFloat(style);
+    txt.style.fontSize = (currentSize - 10) + 'px';
+    }
+    
   </script>
 
   </head>
@@ -403,24 +416,16 @@ pageContext.setAttribute("user",name1,PageContext.SESSION_SCOPE);
           <!-- Modal body -->
           <div class="modal-body">
             <h4>Font Size: </h4>
-            <a type="button" class="btn-outline-dark rounded-pill shadow-lg p-3 offset-7" data-target="#myModalpanel" >&plus;</a>
-            <a type="button" class="btn-outline-dark rounded-pill shadow-lg p-3 " data-target="#myModalpanel" >&minus;</a>
+            <a type="button" class="btn-outline-dark rounded-pill shadow-lg p-3 offset-7" onclick="text_inc();">&plus;</a>
+            <a type="button" class="btn-outline-dark rounded-pill shadow-lg p-3 " onclick="text_dec();">&minus;</a>
           <h4> High Contrast: </h4>
-            <div class="custom-control custom-switch offset-10 col-3 ">
-            <input type="checkbox" class="custom-control-input" id="customSwitch1" onclick="contrast();">
-            <label class="custom-control-label" for="customSwitch1"></label>           
-            </div>
+            <a type="button" class="btn-outline-dark rounded-pill shadow-lg p-3 offset-7" onclick="contrast();">ON</a> 
+            <a type="button" class="btn-outline-dark rounded-pill shadow-lg p-3" onclick="standard();">OFF</a>   
+            
           <h4> Dark Mode </h4>
-            <div class="custom-control custom-switch offset-10 col-3 ">
-            <input type="checkbox" class="custom-control-input" id="customSwitch2" onclick="darkmode();">
-            <label class="custom-control-label" for="customSwitch2"></label>
-            </div>
-          <h4> Standard Mode </h4>
-            <div class="custom-control custom-switch offset-10 col-3 ">
-            <input type="checkbox" class="custom-control-input" id="customSwitch3" onclick="standard();">
-            <label class="custom-control-label" for="customSwitch3"></label>
-            </div>
-           
+            <a type="button" class="btn-outline-dark rounded-pill shadow-lg p-3 offset-7" onclick="darkmode();">ON</a>  
+            <a type="button" class="btn-outline-dark rounded-pill shadow-lg p-3" onclick="standard();">OFF</a>   
+          
           </div>  
         </div>
       </div>

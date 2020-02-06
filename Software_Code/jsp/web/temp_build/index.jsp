@@ -178,7 +178,7 @@
                 <div class="col-sm-5 col-md-5 col-lg-3 col-4 offset-sm-1 offset-lg-1 offset-md-3 " id="sticky-sidebar">
                 <form>
                   <!-- Side card used to take input of location-->
-                  <div class="card" style="width: 18rem;">
+                  <div class="card shadow-lg" style="width: 18rem;">
                     <div class="card-body">
                       <div class="filter-content">
                       <h5 class="card-title">Location</h5>
@@ -196,7 +196,7 @@
                 </form>
                 <form action="index.jsp" method="post">
           <!-- Side card used to take input of location-->
-            <div class="card" style="width: 18rem;">
+            <div class="card shadow-lg" style="width: 18rem;">
               <div class="card-body">
                 <div class="filter-content">
                 <h5 class="card-title">Sort By</h5>
@@ -231,7 +231,7 @@
            </div>
           </br>
             <!-- Side card with range slider to filter maximum price/distance-->
-            <div class="card" style="width: 18rem;">
+            <div class="card shadow-lg" style="width: 18rem;">
               <div class="card-body">
                 <div class="filter-content">
                 <h5 class="card-title">Filters</h5>

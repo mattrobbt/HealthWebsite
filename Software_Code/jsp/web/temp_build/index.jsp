@@ -170,15 +170,14 @@
         </form>
       
            
-         <!-- <a class="btn navbar-brand display-1 offset-2 text-light" href="login.html" >Login </a>
-          <a class="btn navbar-brand display-1 text-light" href="#" >Register</a> -->
+        
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul id="filters" class="navbar-nav fixed-top col-12 col-lg-3">
          
-            <div class="row">
+            
                 <div class="col-sm-5 col-md-5 col-lg-3 col-4 offset-sm-1 offset-lg-1 offset-md-3 " id="sticky-sidebar">
                 <form>
                   <!-- Side card used to take input of location-->

@@ -126,7 +126,11 @@
     modal.classList.remove("bg-dark");
     var modal = document.getElementById("modalmap")
     modal.classList.remove("bg-dark");
-   
+    var element = document.getElementById("navbar");
+    element.classList.remove("bg-primary");
+    var element = document.getElementById("bodymain");
+    element.classList.remove("text-primary");
+     
     }
     
      function text_inc(){

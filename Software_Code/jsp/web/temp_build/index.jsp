@@ -178,10 +178,10 @@
         <ul id="filters" class="navbar-nav fixed-top col-12 col-lg-3">
          
             
-                <div class="col-sm-5 col-md-5 col-lg-3 col-4 offset-sm-1 offset-lg-1 offset-md-3 " id="sticky-sidebar">
+                <div class="col-md-5 col-lg-3 col-8 offset-lg-1 offset-md-3 mx-auto" id="sticky-sidebar">
                 <form>
                   <!-- Side card used to take input of location-->
-                  <div class="card shadow-lg" style="width: 18rem;">
+                  <div class="card shadow-lg " style="width: 18rem;">
                     <div class="card-body">
                       <div class="filter-content">
                       <h5 class="card-title">Location</h5>

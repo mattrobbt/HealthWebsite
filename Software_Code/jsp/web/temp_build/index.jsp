@@ -79,8 +79,10 @@
     element.classList.remove("btn-outline-dark");
     var element = document.getElementById("textInput");
     element.classList.add("bg-dark");
+    element.classList.add("text-light");
     var element = document.getElementById("textInput2");
     element.classList.add("bg-dark");
+    element.classList.add("text-light");
     var cards = document.getElementsByClassName("card")
     
     for (let i = 0; i< cards.length; i++) {
@@ -109,8 +111,10 @@
     element.classList.add("btn-outline-dark");
     var element = document.getElementById("textInput");
     element.classList.remove("bg-dark");
+    element.classList.remove("text-light");
     var element = document.getElementById("textInput2");
-    element.classList.add("bg-dark");
+    element.classList.remove("bg-dark");
+    element.classList.remove("text-light");
     var cards = document.getElementsByClassName("card")
     
     for (let i = 0; i< cards.length; i++) {

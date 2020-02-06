@@ -19,3 +19,4 @@ nbdist/
 .nb-gradle/
 *.xml
 *.class
+*.class

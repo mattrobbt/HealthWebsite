@@ -67,13 +67,22 @@
     element.classList.add("text-primary");
      
     }
-  function darkmode(){
+      function darkmode(){
     var element = document.getElementById("navbar");
     element.classList.add("bg-dark");
     var element = document.getElementById("bodymain");
-    element.classList.add("text-white");
-    var element = document.getElementById("bodymain");
     element.classList.add("bg-dark");
+     
+    }
+      function standard(){
+    var element = document.getElementById("navbar");
+    element.classList.remove("bg-dark");
+    var element = document.getElementById("bodymain");
+    element.classList.remove("bg-dark");
+    var element = document.getElementById("navbar");
+    element.classList.remove("bg-primary");
+    var element = document.getElementById("bodymain");
+    element.classList.remove("text-primary");
      
     }
   </script>
@@ -405,6 +414,11 @@ pageContext.setAttribute("user",name1,PageContext.SESSION_SCOPE);
             <div class="custom-control custom-switch offset-10 col-3 ">
             <input type="checkbox" class="custom-control-input" id="customSwitch2" onclick="darkmode();">
             <label class="custom-control-label" for="customSwitch2"></label>
+            </div>
+          <h4> Standard Mode </h4>
+            <div class="custom-control custom-switch offset-10 col-3 ">
+            <input type="checkbox" class="custom-control-input" id="customSwitch3" onclick="standard();">
+            <label class="custom-control-label" for="customSwitch3"></label>
             </div>
            
           </div>  

@@ -385,7 +385,7 @@ pageContext.setAttribute("user",name1,PageContext.SESSION_SCOPE);
 </div>
     
   <!-- The Map Modal -->
-  <div class="modal" id="myModal">
+  <div class="modal animated zoomInRight" id="myModal">
     <div class="modal-dialog-fluid ">
       <div class="modal-content" id="modalmap">
       

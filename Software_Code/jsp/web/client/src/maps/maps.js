@@ -103,6 +103,25 @@ const addToMetaInfo = (metaInfo, id, providerName, price, lat, lng) => {
   return metaInfo;
 };
 
+const updateCards = metaInfo => {
+    for (let i = 0; i < metaInfo.length; i++){
+        const metaInfoItem = metaInfo[i];
+        const id = metaInfo[i].id;
+        
+        if (id){
+            const card = document.getElementById(id);
+            //console.log(card);
+            
+            if (card){
+                const distance = metaInfoItem.distance ? metaInfoItem.distance : '...';
+                
+                if (card.getElementsByClassName('distance').length === 1){
+                    card.getElementsByClassName('distance')[0].innerHTML = distance;
+                }
+            }
+        }
+    }
+}
 /**
  *  example code to be called externally (Java)
  */

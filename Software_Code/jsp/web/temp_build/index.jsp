@@ -257,7 +257,7 @@
               </div>
             </div> 
           </br>
-            <button type="submit" class="btn btn-primary offset-12" id="searchButton">Submit</button>
+            <button type="submit" class="btn btn-primary offset-12 " id="searchButton">Submit</button>
           </div>
         </form>
  

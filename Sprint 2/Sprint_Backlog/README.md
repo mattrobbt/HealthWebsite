@@ -1,3 +1,3 @@
 # Sprint 1 Backlog
 
-Your Sprint 1 backlog should be put into this folder.
+The templates for sprint and product backlog were inspired by this https://www.smartsheet.com/agile-project-management-excel-templates

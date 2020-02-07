@@ -88,3 +88,24 @@ Daniel: Yesterday he finished some documentation and pair programmed with Matt a
 Mengqi: Yesterday she finished the sorting by price function and connected it to the front end and wrote some unit tests and today she will be working with Charlie to finish the  "sort by distance" filter and later she will be working on reviews system.
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+## Friday 07/02/2020 - Scrum Meeting summary
+The Scrum Master for this meeting was Rauf
+### Members Present:
+Charlie Hewitt, Rauf Tarar Sultana, Daniel Scheitler, Mengqi Jiang, Matt Robb
+
+### Members Not Present:
+
+
+### Apologies:
+
+### Summary of Conversation:
+Charlie: Yesterday he worked on distance logic which started giveing some errors due other code implementation and finshed the report on TDD and today he will be preparing for the meeting.
+
+Rauf: Yesterday I pair programmed with Mengqi on connecting the java to front end and finsihed some documentation and today I will finish off all the documentation and prepare for the client meeting.
+
+Daniel: Yesterday he finished some documentation and will be preparing for the client meeting with the customers
+
+Mengqi: Yesterday she worked on java connectinf to front end and today she will be working preparing for the client meeting.
+
+Matt: Yester he fixed the mobile version for the side menu and accesibility and today he will be preaparing for client meeting

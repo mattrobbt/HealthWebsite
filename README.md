@@ -12,9 +12,9 @@ Group Members:
 
 # Information
 
-The website (with hardcoded data) is available at \\silva.computing.dundee.ac.uk/webapps/2019-agileteam16/public/index.html
+The website  is available at http://silva.computing.dundee.ac.uk/2019-agileteam16/temp_build/
 It should be accessed using Google Chrome as there are a few strange layout bugs in other browsers.
-I think Silva is only accessible from the computing network, the website currently takes a while (up to a few mins) to load. We will speak to Mahamadou about this at the start of Sprint 2.
+
 
 # Videos from Sprint 1
 
